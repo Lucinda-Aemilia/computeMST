@@ -45,3 +45,15 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+*.o
+*.exe
+*.a
+src/*.o
+src/*.a
+src/*.exe
+src/unused/*.*
+src/computeMST/bin/*.*
+src/computeMST/obj/*.*
+src/computeMST/*.cbp
+src/computeMST/*.depend
