@@ -1,0 +1,330 @@
+Generating 15 random points
+========================================================================
+Delaunay Triangulation algorithm running
+22 triangles generated
+========================================================================
+
+Points : 15
+Point: x: 610.907 y: 220.997
+Point: x: 176.299 y: 101.077
+Point: x: 763.353 y: 389.77
+Point: x: 397.937 y: 433.332
+Point: x: 661.055 y: 36.2377
+Point: x: 511.197 y: 181.353
+Point: x: 543.254 y: 347.197
+Point: x: 23.3894 y: 487.551
+Point: x: 160.918 y: 158.007
+Point: x: 759.667 y: 53.9262
+Point: x: 537.785 y: 237.495
+Point: x: 512.223 y: 254.836
+Point: x: 614.13 y: 251.833
+Point: x: 635.078 y: 163.17
+Point: x: 198.444 y: 351.72
+
+Triangles : 22
+Triangle:
+Point: x: 661.055 y: 36.2377
+Point: x: 176.299 y: 101.077
+Point: x: 511.197 y: 181.353
+Edge Point: x: 661.055 y: 36.2377, Point: x: 176.299 y: 101.077
+Edge Point: x: 176.299 y: 101.077, Point: x: 511.197 y: 181.353
+Edge Point: x: 511.197 y: 181.353, Point: x: 661.055 y: 36.2377
+
+Triangle:
+Point: x: 397.937 y: 433.332
+Point: x: 763.353 y: 389.77
+Point: x: 543.254 y: 347.197
+Edge Point: x: 397.937 y: 433.332, Point: x: 763.353 y: 389.77
+Edge Point: x: 763.353 y: 389.77, Point: x: 543.254 y: 347.197
+Edge Point: x: 543.254 y: 347.197, Point: x: 397.937 y: 433.332
+
+Triangle:
+Point: x: 511.197 y: 181.353
+Point: x: 176.299 y: 101.077
+Point: x: 160.918 y: 158.007
+Edge Point: x: 511.197 y: 181.353, Point: x: 176.299 y: 101.077
+Edge Point: x: 176.299 y: 101.077, Point: x: 160.918 y: 158.007
+Edge Point: x: 160.918 y: 158.007, Point: x: 511.197 y: 181.353
+
+Triangle:
+Point: x: 176.299 y: 101.077
+Point: x: 23.3894 y: 487.551
+Point: x: 160.918 y: 158.007
+Edge Point: x: 176.299 y: 101.077, Point: x: 23.3894 y: 487.551
+Edge Point: x: 23.3894 y: 487.551, Point: x: 160.918 y: 158.007
+Edge Point: x: 160.918 y: 158.007, Point: x: 176.299 y: 101.077
+
+Triangle:
+Point: x: 610.907 y: 220.997
+Point: x: 511.197 y: 181.353
+Point: x: 537.785 y: 237.495
+Edge Point: x: 610.907 y: 220.997, Point: x: 511.197 y: 181.353
+Edge Point: x: 511.197 y: 181.353, Point: x: 537.785 y: 237.495
+Edge Point: x: 537.785 y: 237.495, Point: x: 610.907 y: 220.997
+
+Triangle:
+Point: x: 511.197 y: 181.353
+Point: x: 160.918 y: 158.007
+Point: x: 512.223 y: 254.836
+Edge Point: x: 511.197 y: 181.353, Point: x: 160.918 y: 158.007
+Edge Point: x: 160.918 y: 158.007, Point: x: 512.223 y: 254.836
+Edge Point: x: 512.223 y: 254.836, Point: x: 511.197 y: 181.353
+
+Triangle:
+Point: x: 537.785 y: 237.495
+Point: x: 511.197 y: 181.353
+Point: x: 512.223 y: 254.836
+Edge Point: x: 537.785 y: 237.495, Point: x: 511.197 y: 181.353
+Edge Point: x: 511.197 y: 181.353, Point: x: 512.223 y: 254.836
+Edge Point: x: 512.223 y: 254.836, Point: x: 537.785 y: 237.495
+
+Triangle:
+Point: x: 397.937 y: 433.332
+Point: x: 543.254 y: 347.197
+Point: x: 512.223 y: 254.836
+Edge Point: x: 397.937 y: 433.332, Point: x: 543.254 y: 347.197
+Edge Point: x: 543.254 y: 347.197, Point: x: 512.223 y: 254.836
+Edge Point: x: 512.223 y: 254.836, Point: x: 397.937 y: 433.332
+
+Triangle:
+Point: x: 543.254 y: 347.197
+Point: x: 537.785 y: 237.495
+Point: x: 512.223 y: 254.836
+Edge Point: x: 543.254 y: 347.197, Point: x: 537.785 y: 237.495
+Edge Point: x: 537.785 y: 237.495, Point: x: 512.223 y: 254.836
+Edge Point: x: 512.223 y: 254.836, Point: x: 543.254 y: 347.197
+
+Triangle:
+Point: x: 543.254 y: 347.197
+Point: x: 763.353 y: 389.77
+Point: x: 614.13 y: 251.833
+Edge Point: x: 543.254 y: 347.197, Point: x: 763.353 y: 389.77
+Edge Point: x: 763.353 y: 389.77, Point: x: 614.13 y: 251.833
+Edge Point: x: 614.13 y: 251.833, Point: x: 543.254 y: 347.197
+
+Triangle:
+Point: x: 610.907 y: 220.997
+Point: x: 537.785 y: 237.495
+Point: x: 614.13 y: 251.833
+Edge Point: x: 610.907 y: 220.997, Point: x: 537.785 y: 237.495
+Edge Point: x: 537.785 y: 237.495, Point: x: 614.13 y: 251.833
+Edge Point: x: 614.13 y: 251.833, Point: x: 610.907 y: 220.997
+
+Triangle:
+Point: x: 537.785 y: 237.495
+Point: x: 543.254 y: 347.197
+Point: x: 614.13 y: 251.833
+Edge Point: x: 537.785 y: 237.495, Point: x: 543.254 y: 347.197
+Edge Point: x: 543.254 y: 347.197, Point: x: 614.13 y: 251.833
+Edge Point: x: 614.13 y: 251.833, Point: x: 537.785 y: 237.495
+
+Triangle:
+Point: x: 661.055 y: 36.2377
+Point: x: 511.197 y: 181.353
+Point: x: 635.078 y: 163.17
+Edge Point: x: 661.055 y: 36.2377, Point: x: 511.197 y: 181.353
+Edge Point: x: 511.197 y: 181.353, Point: x: 635.078 y: 163.17
+Edge Point: x: 635.078 y: 163.17, Point: x: 661.055 y: 36.2377
+
+Triangle:
+Point: x: 511.197 y: 181.353
+Point: x: 610.907 y: 220.997
+Point: x: 635.078 y: 163.17
+Edge Point: x: 511.197 y: 181.353, Point: x: 610.907 y: 220.997
+Edge Point: x: 610.907 y: 220.997, Point: x: 635.078 y: 163.17
+Edge Point: x: 635.078 y: 163.17, Point: x: 511.197 y: 181.353
+
+Triangle:
+Point: x: 759.667 y: 53.9262
+Point: x: 661.055 y: 36.2377
+Point: x: 635.078 y: 163.17
+Edge Point: x: 759.667 y: 53.9262, Point: x: 661.055 y: 36.2377
+Edge Point: x: 661.055 y: 36.2377, Point: x: 635.078 y: 163.17
+Edge Point: x: 635.078 y: 163.17, Point: x: 759.667 y: 53.9262
+
+Triangle:
+Point: x: 763.353 y: 389.77
+Point: x: 759.667 y: 53.9262
+Point: x: 635.078 y: 163.17
+Edge Point: x: 763.353 y: 389.77, Point: x: 759.667 y: 53.9262
+Edge Point: x: 759.667 y: 53.9262, Point: x: 635.078 y: 163.17
+Edge Point: x: 635.078 y: 163.17, Point: x: 763.353 y: 389.77
+
+Triangle:
+Point: x: 614.13 y: 251.833
+Point: x: 763.353 y: 389.77
+Point: x: 635.078 y: 163.17
+Edge Point: x: 614.13 y: 251.833, Point: x: 763.353 y: 389.77
+Edge Point: x: 763.353 y: 389.77, Point: x: 635.078 y: 163.17
+Edge Point: x: 635.078 y: 163.17, Point: x: 614.13 y: 251.833
+
+Triangle:
+Point: x: 610.907 y: 220.997
+Point: x: 614.13 y: 251.833
+Point: x: 635.078 y: 163.17
+Edge Point: x: 610.907 y: 220.997, Point: x: 614.13 y: 251.833
+Edge Point: x: 614.13 y: 251.833, Point: x: 635.078 y: 163.17
+Edge Point: x: 635.078 y: 163.17, Point: x: 610.907 y: 220.997
+
+Triangle:
+Point: x: 23.3894 y: 487.551
+Point: x: 397.937 y: 433.332
+Point: x: 198.444 y: 351.72
+Edge Point: x: 23.3894 y: 487.551, Point: x: 397.937 y: 433.332
+Edge Point: x: 397.937 y: 433.332, Point: x: 198.444 y: 351.72
+Edge Point: x: 198.444 y: 351.72, Point: x: 23.3894 y: 487.551
+
+Triangle:
+Point: x: 160.918 y: 158.007
+Point: x: 23.3894 y: 487.551
+Point: x: 198.444 y: 351.72
+Edge Point: x: 160.918 y: 158.007, Point: x: 23.3894 y: 487.551
+Edge Point: x: 23.3894 y: 487.551, Point: x: 198.444 y: 351.72
+Edge Point: x: 198.444 y: 351.72, Point: x: 160.918 y: 158.007
+
+Triangle:
+Point: x: 397.937 y: 433.332
+Point: x: 512.223 y: 254.836
+Point: x: 198.444 y: 351.72
+Edge Point: x: 397.937 y: 433.332, Point: x: 512.223 y: 254.836
+Edge Point: x: 512.223 y: 254.836, Point: x: 198.444 y: 351.72
+Edge Point: x: 198.444 y: 351.72, Point: x: 397.937 y: 433.332
+
+Triangle:
+Point: x: 512.223 y: 254.836
+Point: x: 160.918 y: 158.007
+Point: x: 198.444 y: 351.72
+Edge Point: x: 512.223 y: 254.836, Point: x: 160.918 y: 158.007
+Edge Point: x: 160.918 y: 158.007, Point: x: 198.444 y: 351.72
+Edge Point: x: 198.444 y: 351.72, Point: x: 512.223 y: 254.836
+
+
+Edges : 0
+========================================================================
+
+Reconstructed graph
+Point: x: 23.3894 y: 487.551
+Point: x: 160.918 y: 158.007
+Point: x: 176.299 y: 101.077
+Point: x: 198.444 y: 351.72
+Point: x: 397.937 y: 433.332
+Point: x: 511.197 y: 181.353
+Point: x: 512.223 y: 254.836
+Point: x: 537.785 y: 237.495
+Point: x: 543.254 y: 347.197
+Point: x: 610.907 y: 220.997
+Point: x: 614.13 y: 251.833
+Point: x: 635.078 y: 163.17
+Point: x: 661.055 y: 36.2377
+Point: x: 759.667 y: 53.9262
+Point: x: 763.353 y: 389.77
+========================================================================
+Edge 6, 7
+     length: 30.889
+     Point: x: 512.223 y: 254.836, Point: x: 537.785 y: 237.495
+Edge 9, 10
+     length: 31.0039
+     Point: x: 610.907 y: 220.997, Point: x: 614.13 y: 251.833
+Edge 1, 2
+     length: 58.9705
+     Point: x: 160.918 y: 158.007, Point: x: 176.299 y: 101.077
+Edge 5, 7
+     length: 62.1194
+     Point: x: 511.197 y: 181.353, Point: x: 537.785 y: 237.495
+Edge 9, 11
+     length: 62.6747
+     Point: x: 610.907 y: 220.997, Point: x: 635.078 y: 163.17
+Edge 5, 6
+     length: 73.4896
+     Point: x: 511.197 y: 181.353, Point: x: 512.223 y: 254.836
+Edge 7, 9
+     length: 74.9605
+     Point: x: 537.785 y: 237.495, Point: x: 610.907 y: 220.997
+Edge 7, 10
+     length: 77.6797
+     Point: x: 537.785 y: 237.495, Point: x: 614.13 y: 251.833
+Edge 10, 11
+     length: 91.1034
+     Point: x: 614.13 y: 251.833, Point: x: 635.078 y: 163.17
+Edge 6, 8
+     length: 97.4348
+     Point: x: 512.223 y: 254.836, Point: x: 543.254 y: 347.197
+Edge 12, 13
+     length: 100.185
+     Point: x: 661.055 y: 36.2377, Point: x: 759.667 y: 53.9262
+Edge 5, 9
+     length: 107.302
+     Point: x: 511.197 y: 181.353, Point: x: 610.907 y: 220.997
+Edge 7, 8
+     length: 109.838
+     Point: x: 537.785 y: 237.495, Point: x: 543.254 y: 347.197
+Edge 8, 10
+     length: 118.818
+     Point: x: 543.254 y: 347.197, Point: x: 614.13 y: 251.833
+Edge 5, 11
+     length: 125.208
+     Point: x: 511.197 y: 181.353, Point: x: 635.078 y: 163.17
+Edge 11, 12
+     length: 129.564
+     Point: x: 635.078 y: 163.17, Point: x: 661.055 y: 36.2377
+Edge 11, 13
+     length: 165.7
+     Point: x: 635.078 y: 163.17, Point: x: 759.667 y: 53.9262
+Edge 4, 8
+     length: 168.927
+     Point: x: 397.937 y: 433.332, Point: x: 543.254 y: 347.197
+Edge 1, 3
+     length: 197.314
+     Point: x: 160.918 y: 158.007, Point: x: 198.444 y: 351.72
+Edge 10, 14
+     length: 203.21
+     Point: x: 614.13 y: 251.833, Point: x: 763.353 y: 389.77
+Edge 5, 12
+     length: 208.605
+     Point: x: 511.197 y: 181.353, Point: x: 661.055 y: 36.2377
+Edge 4, 6
+     length: 211.949
+     Point: x: 397.937 y: 433.332, Point: x: 512.223 y: 254.836
+Edge 3, 4
+     length: 215.542
+     Point: x: 198.444 y: 351.72, Point: x: 397.937 y: 433.332
+Edge 0, 3
+     length: 221.572
+     Point: x: 23.3894 y: 487.551, Point: x: 198.444 y: 351.72
+Edge 8, 14
+     length: 224.179
+     Point: x: 543.254 y: 347.197, Point: x: 763.353 y: 389.77
+Edge 11, 14
+     length: 260.388
+     Point: x: 635.078 y: 163.17, Point: x: 763.353 y: 389.77
+Edge 3, 6
+     length: 328.396
+     Point: x: 198.444 y: 351.72, Point: x: 512.223 y: 254.836
+Edge 13, 14
+     length: 335.864
+     Point: x: 759.667 y: 53.9262, Point: x: 763.353 y: 389.77
+Edge 2, 5
+     length: 344.385
+     Point: x: 176.299 y: 101.077, Point: x: 511.197 y: 181.353
+Edge 1, 5
+     length: 351.056
+     Point: x: 160.918 y: 158.007, Point: x: 511.197 y: 181.353
+Edge 0, 1
+     length: 357.091
+     Point: x: 23.3894 y: 487.551, Point: x: 160.918 y: 158.007
+Edge 1, 6
+     length: 364.405
+     Point: x: 160.918 y: 158.007, Point: x: 512.223 y: 254.836
+Edge 4, 14
+     length: 368.004
+     Point: x: 397.937 y: 433.332, Point: x: 763.353 y: 389.77
+Edge 0, 4
+     length: 378.452
+     Point: x: 23.3894 y: 487.551, Point: x: 397.937 y: 433.332
+Edge 0, 2
+     length: 415.625
+     Point: x: 23.3894 y: 487.551, Point: x: 176.299 y: 101.077
+Edge 2, 12
+     length: 489.073
+     Point: x: 176.299 y: 101.077, Point: x: 661.055 y: 36.2377
+========================================================================

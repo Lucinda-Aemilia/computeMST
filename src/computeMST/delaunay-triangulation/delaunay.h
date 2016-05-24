@@ -11,8 +11,6 @@
 #include <iterator>
 #include <cmath>
 
-typedef Vector2<float> Vec2f;
-
 class Delaunay
 {
 	public:

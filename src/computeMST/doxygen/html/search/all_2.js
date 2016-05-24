@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['triangle',['Triangle',['../classayron__delaunay_1_1_triangle.html',1,'ayron_delaunay']]]
+  ['graph2d',['Graph2D',['../class_graph2_d.html',1,'Graph2D'],['../class_graph2_d.html#abc8581ed32d2a236fb11c30b45866672',1,'Graph2D::Graph2D()']]]
 ];

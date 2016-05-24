@@ -3,8 +3,6 @@
 
 #include "vector2.h"
 
-typedef Vector2<float> Vec2f;
-
 class Edge
 {
 	public:
@@ -13,18 +11,22 @@ class Edge
 
 		Vec2f p1;
 		Vec2f p2;
+
+		friend std::ostream &operator << (std::ostream &str, const Edge& e)
+        {
+            return str << "Edge " << e.p1 << ", " << e.p2;
+        }
+
+        bool operator == (const Edge & e2) const
+        {
+            return 	(p1 == e2.p1 && p2 == e2.p2) ||
+                    (p1 == e2.p2 && p2 == e2.p1);
+        }
 };
 
-inline std::ostream &operator << (std::ostream &str, Edge const &e)
-{
-	return str << "Edge " << e.p1 << ", " << e.p2;
-}
 
-inline bool operator == (const Edge & e1, const Edge & e2)
-{
-	return 	(e1.p1 == e2.p1 && e1.p2 == e2.p2) ||
-			(e1.p1 == e2.p2 && e1.p2 == e2.p1);
-}
 
-#endif 
+
+
+#endif
 

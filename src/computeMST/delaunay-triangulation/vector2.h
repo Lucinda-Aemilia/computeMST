@@ -4,33 +4,32 @@
 #include <iostream>
 #include <cmath>
 
-template <typename T>
-class Vector2
+class Vec2f
 {
 	public:
 		//
 		// Constructors
 		//
 
-		Vector2()
+		Vec2f()
 		{
 			x = 0;
 			y = 0;
 		}
 
-		Vector2(T _x, T _y) 
+		Vec2f(double _x, double _y)
 		{
 			x = _x;
 			y = _y;
 		}
 
-		Vector2(const Vector2 &v)
+		Vec2f(const Vec2f &v)
 		{
 			x = v.x;
 			y = v.y;
 		}
 
-		void set(const Vector2 &v)
+		void set(const Vec2f &v)
 		{
 			x = v.x;
 			y = v.y;
@@ -38,34 +37,40 @@ class Vector2
 
 		//
 		// Operations
-		//	
-		T dist2(const Vector2 &v)
+		//
+		double dist2(const Vec2f &v) const
 		{
-			T dx = x - v.x;
-			T dy = y - v.y;
-			return dx * dx + dy * dy;	
+			double dx = x - v.x;
+			double dy = y - v.y;
+			return dx * dx + dy * dy;
 		}
 
-		float dist(const Vector2 &v)
+		double dist(const Vec2f &v) const
 		{
 			return sqrtf(dist2(v));
 		}
 
-		T x;
-		T y;
+        friend std::ostream &operator << (std::ostream &str, Vec2f p)
+        {
+            str << "Point: x: " << p.x << " y: " << p.y;
+            return str;
+        }
+
+
+        bool operator == (const Vec2f& right) const
+        {
+            return (x == right.x) && (y == right.y);
+        }
+
+        bool operator < (const Vec2f& right) const
+        {
+            if (x != right.x) return x < right.x;
+            return y < right.y;
+        }
+
+		double x;
+		double y;
 
 };
 
-template<typename T>
-std::ostream &operator << (std::ostream &str, Vector2<T> const &point) 
-{
-	return str << "Point x: " << point.x << " y: " << point.y;
-}
-
-template<typename T>
-bool operator == (Vector2<T> v1, Vector2<T> v2)
-{
-	return (v1.x == v2.x) && (v1.y == v2.y);
-}
-	
 #endif
