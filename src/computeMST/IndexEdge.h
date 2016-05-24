@@ -21,9 +21,13 @@ public:
 
     double length() const { return m_length; }
 
-    int start() const { return m_index[0]; }
+    int startIndex() const { return m_index[0]; }
 
-    int end() const { return m_index[1]; }
+    int endIndex() const { return m_index[1]; }
+
+    Vec2f start() const { return p1; }
+
+    Vec2f end() const { return p2; }
 
     bool operator < (const IndexEdge& right) const { return m_length < right.m_length; }
 

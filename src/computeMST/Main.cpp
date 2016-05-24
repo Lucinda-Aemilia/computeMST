@@ -11,6 +11,16 @@
 #include "delaunay-triangulation/delaunay.h"
 #include "Graph2D.h"
 #include "TestcaseGenerator.h"
+#include "Settings.h"
+
+#ifdef FREEGLUT
+#include <GL/glut.h>
+#include "GlutFunctions.h"
+// #include <windows.h>
+#endif // FREEGLUT
+
+std::stringstream debugout;
+Graph2D* myGraph = NULL;
 
 void Initialize()
 {
@@ -25,19 +35,43 @@ void CleanUp()
     logout << debugout.str();
     logout.close();
     #endif // DEBUG
+
+    delete myGraph;
 }
 
-std::stringstream debugout;
-
-int main()
+int main(int argc, char** argv)
 {
     Initialize();
 
 	std::vector<Vec2f> points(TestcaseGenerator());
 
-    Graph2D graph(points);
-    double mstLength = graph.Kruskal();
+    myGraph = new Graph2D(points);
+    double mstLength = myGraph->Kruskal();
     std::cout << "The length of the minimal spanning tree: " << mstLength << std::endl;
+
+    #ifdef FREEGLUT
+
+    glutInit( &argc, argv );
+    glutInitDisplayMode ( GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA );
+    glutInitWindowSize ( 800, 600 );
+    glutInitWindowPosition ( 0, 0 );
+    glutCreateWindow ( "Compute MST" );
+
+    // These should be put in initRendering()
+    glEnable(GL_POINT_SMOOTH);
+    glEnable(GL_LINE_SMOOTH);
+    glHint(GL_POINT_SMOOTH_HINT, GL_NICEST); // Make round points, not square points
+    glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);  // Antialias the lines
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+    glClearColor( 0.9, 0.9, 0.9, 1 );
+
+    glutDisplayFunc( display );
+    glutReshapeFunc( reshape );   // 这个必须有
+    glutMainLoop();
+
+    #endif // FREEGLUT
 
     CleanUp();
 

@@ -5,6 +5,7 @@
 #include <cmath>
 
 #include "Graph2D.h"
+#include "Settings.h"
 
 /// Generate an integer in the range [a, b]
 ///
@@ -29,11 +30,14 @@ double randomDouble(double a, double b)
     return a + r;
 }
 
-std::vector<Vec2f> TestcaseGenerator(int num_lower_bound = 4, int num_upper_bound = 40,
-                              double x_upper_bound = 800.0, double y_upper_bound = 600.0)
+///
+///
+/// To-do: output the testcase file to ../testcase
+std::vector<Vec2f> TestcaseGenerator(int num_lower_bound = 100, int num_upper_bound = 500,
+                              double x_upper_bound = MAX_X, double y_upper_bound = MAX_Y)
 {
     srand(time(NULL));
-	int numberPoints = randomInt(4, 40);
+	int numberPoints = randomInt(num_lower_bound, num_upper_bound);
 
 	#ifdef DEBUG
 	debugout << "Generating " << numberPoints << " random points" << std::endl;
@@ -41,7 +45,7 @@ std::vector<Vec2f> TestcaseGenerator(int num_lower_bound = 4, int num_upper_boun
 
 	std::vector<Vec2f> points;
 	for(int i = 0; i < numberPoints; i++) {
-		points.push_back(Vec2f(randomDouble(0, 800), randomDouble(0, 600)));
+		points.push_back(Vec2f(randomDouble(0.0, x_upper_bound), randomDouble(0.0, y_upper_bound)));
 	}
 
 	return points;

@@ -64,10 +64,11 @@ double Graph2D::Kruskal()
     for (int i = 0; i < n; i++) father.push_back(i);
 
     double mstLength = 0.0;
+    m_kruskalMSTEdges.clear();
     for (int i = 0; i < m_delaunayEdges.size(); i++)
     {
-        int start = m_delaunayEdges[i].start();
-        int end = m_delaunayEdges[i].end();
+        int start = m_delaunayEdges[i].startIndex();
+        int end = m_delaunayEdges[i].endIndex();
 
         // std::cout << start << ' ' << end << ' ' << m_delaunayEdges[i].length() << std::endl;
 
@@ -77,6 +78,7 @@ double Graph2D::Kruskal()
         {
             father[start] = end;
             mstLength += m_delaunayEdges[i].length();
+            m_kruskalMSTEdges.push_back(m_delaunayEdges[i]);
         }
     }
 

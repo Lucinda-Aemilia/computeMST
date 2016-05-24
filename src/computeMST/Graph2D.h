@@ -22,6 +22,9 @@ public:
     /// \return The length of the MST.
     double Kruskal();
 
+    std::vector<Vec2f> getPoints() const { return m_points; }
+    std::vector<IndexEdge> getKruskalMSTEdges() const { return m_kruskalMSTEdges; }
+
 protected:
 
     std::vector<int> father;
@@ -31,9 +34,9 @@ protected:
 private:
 
     std::vector<Vec2f> m_points;
-    // std::vector<Edge> m_naiveEdges;
-    // std::vector<Edge> m_delaunayEdges;
+
     std::vector<IndexEdge> m_delaunayEdges;
+    std::vector<IndexEdge> m_kruskalMSTEdges;
 
     Delaunay m_triangulation;
 	std::vector<Triangle> m_triangles;
