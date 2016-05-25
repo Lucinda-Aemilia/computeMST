@@ -57,7 +57,7 @@ Graph2D::Graph2D(std::vector<Vec2f>& points) : m_points(points)
 
 }
 
-double Graph2D::Kruskal()
+double Graph2D::Kruskal(bool naive /*= false*/)
 {
     father.clear();
     int n = m_points.size();
@@ -65,6 +65,7 @@ double Graph2D::Kruskal()
 
     double mstLength = 0.0;
     m_kruskalMSTEdges.clear();
+
     for (int i = 0; i < m_delaunayEdges.size(); i++)
     {
         int start = m_delaunayEdges[i].startIndex();

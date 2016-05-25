@@ -8,6 +8,10 @@
 #include <array>
 #include <ctime>
 
+#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
+#include <CGAL/Triangulation_euclidean_traits_xy_3.h>
+#include <CGAL/Delaunay_triangulation_2.h>
+
 #include "delaunay-triangulation/delaunay.h"
 #include "Graph2D.h"
 #include "TestcaseGenerator.h"
@@ -20,6 +24,7 @@
 #endif // FREEGLUT
 
 std::stringstream debugout;
+
 Graph2D* myGraph = NULL;
 
 void Initialize()

@@ -20,7 +20,7 @@ public:
 
     /// The Kruskal algorithm for finding the minimal spanning tree.
     /// \return The length of the MST.
-    double Kruskal();
+    double Kruskal(bool naive = false);
 
     std::vector<Vec2f> getPoints() const { return m_points; }
     std::vector<IndexEdge> getKruskalMSTEdges() const { return m_kruskalMSTEdges; }

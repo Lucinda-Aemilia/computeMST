@@ -44,7 +44,9 @@ static void reshape(int width, int height)
 
     int side = std::min(width, height);
     //设置视窗口的位置大小,注意原点（0,0）在屏幕画面左下角
+    // need to think here
     glViewport(0, 0, side, side);
+    // glViewport( (width-side)/2, (height-side)/2, (width+side)/2, (height+side)/2 );
 
     // 一般只在窗口reshape时才重新设定下投影矩阵和模型矩阵
     glMatrixMode( GL_PROJECTION );
