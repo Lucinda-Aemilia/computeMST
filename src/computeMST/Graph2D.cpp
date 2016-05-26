@@ -1,93 +1,146 @@
 #include "Graph2D.h"
+#include <GL/glut.h>
 
-Graph2D::Graph2D(std::vector<Vec2f>& points) : m_points(points)
+cmst::Graph2D::Graph2D(std::vector<cmst::Point2D>& points) : m_points(points)
 {
     int n = m_points.size();
-
-    // compute Delaunay Edges
-    m_triangles = m_triangulation.triangulate(m_points);
-    std::vector<Edge> delaunayEdges( m_triangulation.getEdges() );
+    m_graph.assign(n, std::vector<int>());
 
     #ifdef DEBUG
-
-    debugout << "========================================================================\n";
-
-    debugout << "Delaunay Triangulation algorithm running\n";
-
-    debugout << m_triangles.size() << " triangles generated\n";
-
-	debugout << "========================================================================\n";
-
-	debugout << "\nPoints : " << m_points.size() << std::endl;
-	for(auto &p : m_points)
-		debugout << p << std::endl;
-
-	debugout << "\nTriangles : " << m_triangles.size() << std::endl;
-	for(auto &t : m_triangles)
-		debugout << t << std::endl;
-
-	debugout << "\nEdges : " << m_delaunayEdges.size() << std::endl;
-	for(auto &e : m_delaunayEdges)
-		debugout << e << std::endl;
-
-    debugout << "========================================================================\n";
+    debugout << "Constructing a graph of size " << n << std::endl;
     #endif // DEBUG
 
-    // reconstruct the Delaunay graph
-    std::sort(m_points.begin(), m_points.end());
-    for (int i = delaunayEdges.size() - 1; i >= 0; i--)
+    // Construct the Delaunay data structure
+    std::vector<K::Point_2> vertices;
+    for (int i = 0; i < n; i++)
+        vertices.push_back( K::Point_2(points[i].x(), points[i].y()) );
+    m_delaunay.insert(vertices.begin(), vertices.end());
+
+    // Store the Voronoi graph
+    Delaunay::Edge_iterator eit;
+    for (eit = m_delaunay.edges_begin(); eit != m_delaunay.edges_end(); eit++)
     {
-        int index1 = std::lower_bound(m_points.begin(), m_points.end(), delaunayEdges[i].p1) - m_points.begin();
-        int index2 = std::lower_bound(m_points.begin(), m_points.end(), delaunayEdges[i].p2) - m_points.begin();
-        m_delaunayEdges.push_back(IndexEdge(delaunayEdges[i].p1, delaunayEdges[i].p2, index1, index2));
+        CGAL::Object o = m_delaunay.dual(eit);//边eit在其对偶图中所对应的边
+        m_voronoiEdge.push_back(o);
     }
 
-    std::sort(m_delaunayEdges.begin(), m_delaunayEdges.end());
-    m_delaunayEdges.erase(unique(m_delaunayEdges.begin(), m_delaunayEdges.end()), m_delaunayEdges.end());
+    // Reconstruct my graph
+    std::sort(m_points.begin(), m_points.end());
+    Delaunay::Finite_faces_iterator fit;
+    for (fit = m_delaunay.finite_faces_begin(); fit != m_delaunay.finite_faces_end(); fit++)
+    {
+        for (int i = 0; i <= 2; i++)
+        {
+            cmst::Point2D start( fit->vertex(i)->point().hx(), fit->vertex(i)->point().hy() );
+            cmst::Point2D end( fit->vertex((i+1)%3)->point().hx(), fit->vertex((i+1)%3)->point().hy() );
 
-    #ifdef DEBUG
-    debugout << "\nReconstructed graph\n";
-    for (int i = 0; i < n; i++)
-        debugout << m_points[i] << std::endl;
-    debugout << "========================================================================\n";
-    for (int i = 0; i < m_delaunayEdges.size(); i++)
-        debugout << m_delaunayEdges[i] << std::endl;
-    debugout << "========================================================================\n";
-    #endif // DEBUG
+            int index1 = std::lower_bound(m_points.begin(), m_points.end(), start) - m_points.begin();
+            int index2 = std::lower_bound(m_points.begin(), m_points.end(), end) - m_points.begin();
+            m_delaunayEdge.push_back( cmst::IndexEdge2D(start, end, index1, index2) );
+        }
+    }
 
+    int m = m_delaunayEdge.size();
+    std::sort(m_delaunayEdge.begin(), m_delaunayEdge.end());
+    m_delaunayEdge.erase( std::unique(m_delaunayEdge.begin(), m_delaunayEdge.end()), m_delaunayEdge.end() );
+
+    for (int i = 0; i < m; i++)
+    {
+        m_graph[m_delaunayEdge[i].startIndex()].push_back( m_delaunayEdge[i].endIndex() );
+        m_graph[m_delaunayEdge[i].endIndex()].push_back( m_delaunayEdge[i].startIndex() );
+    }
 }
 
-double Graph2D::Kruskal(bool naive /*= false*/)
+double cmst::Graph2D::Kruskal(bool naive /* = false*/)
 {
-    father.clear();
-    int n = m_points.size();
-    for (int i = 0; i < n; i++) father.push_back(i);
+    m_MSTEdge.clear();
+    cmst::Graph2D::initFather();
 
-    double mstLength = 0.0;
-    m_kruskalMSTEdges.clear();
+    double mstLength = 0.0f;
 
-    for (int i = 0; i < m_delaunayEdges.size(); i++)
+    if (!naive)
     {
-        int start = m_delaunayEdges[i].startIndex();
-        int end = m_delaunayEdges[i].endIndex();
-
-        // std::cout << start << ' ' << end << ' ' << m_delaunayEdges[i].length() << std::endl;
-
-        start = findFather(start);
-        end = findFather(end);
-        if (start != end)
+        int m = m_delaunayEdge.size();
+        for (int i = 0; i < m; i++)
         {
-            father[start] = end;
-            mstLength += m_delaunayEdges[i].length();
-            m_kruskalMSTEdges.push_back(m_delaunayEdges[i]);
+            int fa1 = cmst::Graph2D::findFather(m_delaunayEdge[i].startIndex());
+            int fa2 = cmst::Graph2D::findFather(m_delaunayEdge[i].endIndex());
+            if (fa1 != fa2)
+            {
+                father[fa1] = fa2;
+                m_MSTEdge.push_back(m_delaunayEdge[i]);
+                mstLength += m_delaunayEdge[i].length();
+            }
         }
     }
 
     return mstLength;
 }
 
-int Graph2D::findFather(int x)
+int cmst::Graph2D::findFather(int x)
 {
     if (father[x] == x) return x;
     return father[x] = findFather(father[x]);
+}
+
+void cmst::Graph2D::initFather()
+{
+    father.clear();
+    int n = m_points.size();
+    for (int i = 0; i < n; i++)
+        father.push_back(i);
+}
+
+void cmst::Graph2D::drawPoint()
+{
+    glPointSize( 4.0f );   // 绘制前设置下点的大小和颜色
+    glColor3f( 1, 0, 0 );
+
+    glBegin( GL_POINTS );
+    //glVertex3f( 56, 87, 0 );
+    for (int i = 0; i < m_points.size(); i++)
+        glVertex2f(m_points[i].x(), m_points[i].y());
+    glEnd();
+}
+
+void cmst::Graph2D::drawDelaunay()
+{
+    glColor3f( 0, 0, 1 );
+    glBegin(GL_LINES);
+    for (int i = 0; i < m_delaunayEdge.size(); i++)
+    {
+        glVertex3f(m_delaunayEdge[i].start().x(), m_delaunayEdge[i].start().y(), 0);
+        glVertex3f(m_delaunayEdge[i].end().x(), m_delaunayEdge[i].end().y(), 0);
+    }
+    glEnd();
+}
+
+void cmst::Graph2D::drawVoronoi()
+{
+    Delaunay::Edge_iterator eit;//遍历Delaunay的所有边，绘制Delaunay图的对偶图，即Voronoi图
+
+    glEnable( GL_LINE_STIPPLE );//使用点画模式，即使用虚线来绘制Voronoi图
+    glLineStipple( 1, 0x3333 );
+    glColor3f( 0.0, 0.0, 0.0 );
+
+    for (int i = 0; i < m_voronoiEdge.size(); i++)
+    {
+        CGAL::Object o = m_voronoiEdge[i];
+
+        if (CGAL::object_cast<K::Segment_2>(&o)) //如果这条边是线段，则绘制线段
+        {
+            glBegin(GL_LINES);
+            glVertex2i( CGAL::object_cast<K::Segment_2>(&o)->source().hx(), CGAL::object_cast<K::Segment_2>(&o)->source().hy() );
+            glVertex2i( CGAL::object_cast<K::Segment_2>(&o)->target().hx(), CGAL::object_cast<K::Segment_2>(&o)->target().hy() );
+            glEnd();
+        }
+        else if (CGAL::object_cast<K::Ray_2>(&o))//如果这条边是射线，则绘制射线
+        {
+            glBegin(GL_LINES);
+            glVertex2i( CGAL::object_cast<K::Ray_2>(&o)->source().hx(), CGAL::object_cast<K::Ray_2>(&o)->source().hy() );
+            glVertex2i( CGAL::object_cast<K::Ray_2>(&o)->point(1).hx(), CGAL::object_cast<K::Ray_2>(&o)->point(1).hy() );
+            glEnd();
+        }
+    }
+    glDisable( GL_LINE_STIPPLE );//关闭点画模式
 }

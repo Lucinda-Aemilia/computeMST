@@ -7,45 +7,26 @@
 
 #include "Settings.h"
 #include "Graph2D.h"
+#include "Window.h"
 
 static void display()
 {
     glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 
-    glPointSize( 3.0f );   // 绘制前设置下点的大小和颜色
-    glColor3f( 1, 0, 0 );
+    cmst::Window::instance()->draw();
 
-    std::vector<Vec2f> points( myGraph->getPoints() );
-    std::vector<IndexEdge> kruskalMSTEdges( myGraph->getKruskalMSTEdges() );
-
-    glBegin( GL_POINTS );
-    //glVertex3f( 56, 87, 0 );
-    for (int i = 0; i < points.size(); i++)
-        glVertex3f(points[i].x, points[i].y, 0);
-    glEnd();
-
-    glColor3f( 0, 0, 1 );
-    glBegin(GL_LINES);
-    for (int i = 0; i < kruskalMSTEdges.size(); i++)
-    {
-        glVertex3f(kruskalMSTEdges[i].start().x, kruskalMSTEdges[i].start().y, -10);
-        glVertex3f(kruskalMSTEdges[i].end().x, kruskalMSTEdges[i].end().y, -10);
-    }
-    glEnd();
-
-    // 只flush没用的，直接swap就好了
     glutSwapBuffers();
 }
 
 static void reshape(int width, int height)
 {
     // 这里要设置opengl在窗口的绘图区域，一般是整个窗口
-    // glViewport( 0, 0, width, height );
+    glViewport( 0, 0, width, height );
 
     int side = std::min(width, height);
     //设置视窗口的位置大小,注意原点（0,0）在屏幕画面左下角
     // need to think here
-    glViewport(0, 0, side, side);
+    // glViewport(0, 0, side, side);
     // glViewport( (width-side)/2, (height-side)/2, (width+side)/2, (height+side)/2 );
 
     // 一般只在窗口reshape时才重新设定下投影矩阵和模型矩阵

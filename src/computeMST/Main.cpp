@@ -8,14 +8,10 @@
 #include <array>
 #include <ctime>
 
-#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
-#include <CGAL/Triangulation_euclidean_traits_xy_3.h>
-#include <CGAL/Delaunay_triangulation_2.h>
-
-#include "delaunay-triangulation/delaunay.h"
 #include "Graph2D.h"
 #include "TestcaseGenerator.h"
 #include "Settings.h"
+#include "Window.h"
 
 #ifdef FREEGLUT
 #include <GL/glut.h>
@@ -24,8 +20,6 @@
 #endif // FREEGLUT
 
 std::stringstream debugout;
-
-Graph2D* myGraph = NULL;
 
 void Initialize()
 {
@@ -41,17 +35,16 @@ void CleanUp()
     logout.close();
     #endif // DEBUG
 
-    delete myGraph;
 }
 
 int main(int argc, char** argv)
 {
     Initialize();
 
-	std::vector<Vec2f> points(TestcaseGenerator());
+	std::vector<cmst::Point2D> points(cmst::TestcaseGenerator());
 
-    myGraph = new Graph2D(points);
-    double mstLength = myGraph->Kruskal();
+    cmst::Window::instance()->resetCurGraph(points);
+    double mstLength = cmst::Window::instance()->curGraph()->Kruskal();
     std::cout << "The length of the minimal spanning tree: " << mstLength << std::endl;
 
     #ifdef FREEGLUT

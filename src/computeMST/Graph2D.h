@@ -3,42 +3,54 @@
 #include <vector>
 #include <algorithm>
 
-#include "delaunay-triangulation/delaunay.h"
-#include "delaunay-triangulation/vector2.h"
+#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
+#include <CGAL/Triangulation_euclidean_traits_xy_3.h>
+#include <CGAL/Delaunay_triangulation_2.h>
+
 #include "Settings.h"
-#include "IndexEdge.h"
+#include "IndexEdge2D.h"
 
-class Graph2D
+typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
+typedef CGAL::Delaunay_triangulation_2<K> Delaunay;
+typedef Delaunay::Vertex_handle Vertex_handle;
+
+namespace cmst
 {
-public:
+    class Graph2D
+    {
+    public:
 
-    /// Constructor which does everything.
-    ///
-    /// - Compute naiveEdge which contains all edges
-    /// - Compute Delaunay graph
-    Graph2D(std::vector<Vec2f>& points);
+        /// Constructor which does everything.
+        ///
+        /// - Compute naiveEdge which contains all edges
+        /// - Compute Delaunay graph
+        Graph2D(std::vector<Point2D>& points);
 
-    /// The Kruskal algorithm for finding the minimal spanning tree.
-    /// \return The length of the MST.
-    double Kruskal(bool naive = false);
+        /// The Kruskal algorithm for finding the minimal spanning tree.
+        /// \return The length of the MST.
+        double Kruskal(bool naive = false);
 
-    std::vector<Vec2f> getPoints() const { return m_points; }
-    std::vector<IndexEdge> getKruskalMSTEdges() const { return m_kruskalMSTEdges; }
+        void drawPoint();
 
-protected:
+        void drawDelaunay();
 
-    std::vector<int> father;
+        void drawVoronoi();
 
-    int findFather(int x);
+    protected:
 
-private:
+        std::vector<int> father;
 
-    std::vector<Vec2f> m_points;
+        int findFather(int x);
 
-    std::vector<IndexEdge> m_delaunayEdges;
-    std::vector<IndexEdge> m_kruskalMSTEdges;
+        void initFather();
 
-    Delaunay m_triangulation;
-	std::vector<Triangle> m_triangles;
-};
+    private:
 
+        std::vector<Point2D> m_points;
+        std::vector<IndexEdge2D> m_delaunayEdge;
+        std::vector<IndexEdge2D> m_MSTEdge;
+        std::vector<CGAL::Object> m_voronoiEdge;
+        std::vector<std::vector<int>> m_graph;
+        Delaunay m_delaunay;
+    };
+}

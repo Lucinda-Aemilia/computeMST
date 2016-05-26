@@ -1,6 +1,6 @@
 # To-do List
- - Change the reshape() function, such that it will perform better
- - Implement naive-Kruskal()
- - reconstruct the graph in adjcancy list
- - Implement glut button
- - Implement Incremental algorithm myself / install *CGAL*...
+ - Learn CGAL
+ - Write my own Graph and Edge to encapsulate
+ - re-implement kruskal
+ - Use glut pop menu to switch between modes
+ - begin to write manual
