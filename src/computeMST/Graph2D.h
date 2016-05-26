@@ -36,6 +36,8 @@ namespace cmst
 
         void drawVoronoi();
 
+        void drawMST();
+
     protected:
 
         std::vector<int> father;

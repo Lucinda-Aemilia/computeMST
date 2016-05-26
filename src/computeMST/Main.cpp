@@ -41,11 +41,7 @@ int main(int argc, char** argv)
 {
     Initialize();
 
-	std::vector<cmst::Point2D> points(cmst::TestcaseGenerator());
-
-    cmst::Window::instance()->resetCurGraph(points);
-    double mstLength = cmst::Window::instance()->curGraph()->Kruskal();
-    std::cout << "The length of the minimal spanning tree: " << mstLength << std::endl;
+    cmst::Window::instance()->resetCurGraph();
 
     #ifdef FREEGLUT
 
@@ -54,6 +50,8 @@ int main(int argc, char** argv)
     glutInitWindowSize ( 800, 600 );
     glutInitWindowPosition ( 0, 0 );
     glutCreateWindow ( "Compute MST" );
+
+    createGLUTMenus();
 
     // These should be put in initRendering()
     glEnable(GL_POINT_SMOOTH);
@@ -65,8 +63,9 @@ int main(int argc, char** argv)
 
     glClearColor( 0.9, 0.9, 0.9, 1 );
 
-    glutDisplayFunc( display );
-    glutReshapeFunc( reshape );   // 这个必须有
+    glutDisplayFunc(display);
+    glutIdleFunc(display);
+    glutReshapeFunc(reshape);   // 这个必须有
     glutMainLoop();
 
     #endif // FREEGLUT

@@ -13,7 +13,7 @@ namespace cmst
     /// Generate an integer in the range [a, b]
     ///
     /// Needs to be improved using other random classes
-    int randomInt(int a, int b)
+    static int randomInt(int a, int b)
     {
         if (a > b) std::swap(a, b);
         int random = rand();
@@ -24,7 +24,7 @@ namespace cmst
     /// Generate a floating-point number in the range [a, b]
     ///
     /// Needs to be improved using other random classes
-    double randomDouble(double a, double b)
+    static double randomDouble(double a, double b)
     {
         if (a > b) std::swap(a, b);
         double random = ((double) rand()) / (double) RAND_MAX;
@@ -36,7 +36,7 @@ namespace cmst
     ///
     ///
     /// To-do: output the testcase file to ../testcase
-    std::vector<Point2D> TestcaseGenerator(int num_lower_bound = 100, int num_upper_bound = 500,
+    static std::vector<Point2D> TestcaseGenerator(int num_lower_bound = 100, int num_upper_bound = 500,
                                   double x_upper_bound = MAX_X, double y_upper_bound = MAX_Y)
     {
         srand(time(NULL));

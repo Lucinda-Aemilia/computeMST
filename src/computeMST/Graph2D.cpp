@@ -106,6 +106,7 @@ void cmst::Graph2D::drawPoint()
 void cmst::Graph2D::drawDelaunay()
 {
     glColor3f( 0, 0, 1 );
+    glLineWidth(1);
     glBegin(GL_LINES);
     for (int i = 0; i < m_delaunayEdge.size(); i++)
     {
@@ -115,13 +116,27 @@ void cmst::Graph2D::drawDelaunay()
     glEnd();
 }
 
+void cmst::Graph2D::drawMST()
+{
+    glColor3f( 245/255.0, 92/255.0, 229/255.0 );
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    for (int i = 0; i < m_MSTEdge.size(); i++)
+    {
+        glVertex2f(m_MSTEdge[i].start().x(), m_MSTEdge[i].start().y());
+        glVertex2f(m_MSTEdge[i].end().x(), m_MSTEdge[i].end().y());
+    }
+    glEnd();
+}
+
 void cmst::Graph2D::drawVoronoi()
 {
     Delaunay::Edge_iterator eit;//遍历Delaunay的所有边，绘制Delaunay图的对偶图，即Voronoi图
 
     glEnable( GL_LINE_STIPPLE );//使用点画模式，即使用虚线来绘制Voronoi图
-    glLineStipple( 1, 0x3333 );
-    glColor3f( 0.0, 0.0, 0.0 );
+    glLineWidth(1);
+    glLineStipple(1, 0x3333);
+    glColor3f(52/255.0, 197/255.0, 18/255.0);
 
     for (int i = 0; i < m_voronoiEdge.size(); i++)
     {

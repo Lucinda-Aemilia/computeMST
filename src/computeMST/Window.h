@@ -4,6 +4,11 @@
 
 namespace cmst
 {
+    enum Menu
+    {
+        Refresh,
+        Quit,
+    };
     class Window
     {
         public:
@@ -17,8 +22,11 @@ namespace cmst
 
             Graph2D* curGraph() { return m_curGraph; }
 
-            void resetCurGraph(std::vector<Point2D> points);
+            void resetCurGraph(std::vector<Point2D>& points);
 
+            void resetCurGraph();
+
+            /// Draw the current graph
             void draw();
 
         private:
@@ -30,6 +38,8 @@ namespace cmst
             Window(const Window&);
 
             Graph2D* m_curGraph;
+
+            int menu; ///< The menu of current window
     };
 
 }
