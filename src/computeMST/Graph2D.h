@@ -57,6 +57,11 @@ namespace cmst
 
         int graphConstructTime() const { return m_graphConstructTime; }
 
+        int pointNum() const { return m_points.size(); }
+
+        int edgeNum() const { return m_delaunayEdge.size(); }
+
+
     protected:
 
         std::vector<int> father;

@@ -11,9 +11,13 @@ namespace cmst
         NEW_11_100,
         NEW_101_1000,
         NEW_1001_5000,
+        NEW_5001_10000,
         SHOW,
         SHOW_VORONOI,
         SHOW_DELAUNAY,
+        TEST,
+        TEST_5,
+        TEST_20,
         QUIT,
     };
     class Window
@@ -52,7 +56,42 @@ namespace cmst
             /// Draw the current graph
             void draw();
 
+            /// Print information about the current displayed graph
             void printCurInfo();
+
+            bool displayTest() const { return m_test.m_displayTest; }
+
+            /// Generate \param n tests and display the first one
+            void generateTest(int n);
+
+            /// Print information about the test displayed
+            void printTestInfo();
+
+            int testDisplayNum() const { return m_test.m_displayTestNum; }
+
+            void changeTestDisplay(int direc)
+            {
+                if (direc < 0 && m_test.m_displayTestNum > 0)
+                {
+                    m_test.m_displayTestNum--;
+                    m_curGraph = &m_test.m_testGraphs[m_test.m_displayTestNum];
+                }
+                else if (direc > 0 && m_test.m_displayTestNum < m_test.m_testGraphs.size()-1)
+                {
+                    m_test.m_displayTestNum++;
+                    m_curGraph = &m_test.m_testGraphs[m_test.m_displayTestNum];
+                }
+            }
+
+        protected:
+            struct Test
+            {
+                bool m_displayTest;
+                int m_displayTestNum;
+                std::vector<Graph2D> m_testGraphs;
+
+                Test() : m_displayTest(false), m_displayTestNum(0) {}
+            } m_test;
 
         private:
 

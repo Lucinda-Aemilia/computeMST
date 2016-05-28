@@ -64,6 +64,8 @@ int main(int argc, char** argv)
     glClearColor( 0.9, 0.9, 0.9, 1 );
 
     glutDisplayFunc(display);
+    glutKeyboardFunc(processNormalKeys);
+    glutSpecialFunc(processSpecialKeys);
     glutIdleFunc(display);
     glutReshapeFunc(reshape);   // 这个必须有
     glutMainLoop();

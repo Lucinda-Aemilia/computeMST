@@ -60,6 +60,43 @@ void reshape(int width, int height)
     glLoadIdentity();
 }
 
+void processNormalKeys(unsigned char key, int x, int y)
+{
+    switch (key)
+    {
+    case 27 :
+        exit(0);
+        break;
+    }
+}
+
+void processSpecialKeys(int key, int x, int y)
+{
+    switch (key)
+    {
+    case GLUT_KEY_LEFT :
+        // std::cout << "Left arrow pressed" << std::endl;
+        if (cmst::Window::instance()->displayTest())
+        {
+            cmst::Window::instance()->changeTestDisplay(-1);
+            cmst::Window::instance()->printTestInfo();
+            std::cout << "\nThe " << cmst::Window::instance()->testDisplayNum()+1 << "(th) test graph" << std::endl;
+            cmst::Window::instance()->printCurInfo();
+        }
+        break;
+    case GLUT_KEY_RIGHT :
+        // std::cout << "Right arrow pressed" << std::endl;
+        if (cmst::Window::instance()->displayTest())
+        {
+            cmst::Window::instance()->changeTestDisplay(1);
+            cmst::Window::instance()->printTestInfo();
+            std::cout << "\nThe " << cmst::Window::instance()->testDisplayNum()+1 << "(th) test graph" << std::endl;
+            cmst::Window::instance()->printCurInfo();
+        }
+        break;
+    }
+}
+
 void createGLUTMenus()
 {
 	// create the menu and
@@ -70,14 +107,20 @@ void createGLUTMenus()
 	glutAddMenuEntry("Generate (11-100)", cmst::Menu::NEW_11_100);
 	glutAddMenuEntry("Generate (101-1000)", cmst::Menu::NEW_101_1000);
 	glutAddMenuEntry("Generate (1001-5000)", cmst::Menu::NEW_1001_5000);
+	glutAddMenuEntry("Generate (5001-10000)", cmst::Menu::NEW_5001_10000);
 
 	int showMenu = glutCreateMenu(processShowMenu);
 	// glutAddMenuEntry("Voronoi", cmst::Menu::SHOW_VORONOI);
 	glutAddMenuEntry("Delaunay", cmst::Menu::SHOW_DELAUNAY);
 
+	int testMenu = glutCreateMenu(processTestMenu);
+	glutAddMenuEntry("Test (5)", cmst::Menu::TEST_5);
+	glutAddMenuEntry("Test (20)", cmst::Menu::TEST_20);
+
 	int mainMenu = glutCreateMenu(processMainMenu);
 	glutAddSubMenu("Generate", newMenu);
 	glutAddSubMenu("Show", showMenu);
+	glutAddSubMenu("Test", testMenu);
 	glutAddMenuEntry("Quit", cmst::Menu::QUIT);
 
 	// attach the menu to the right button
@@ -108,6 +151,11 @@ void processNewMenu(int option)
         cmst::Window::instance()->resetCurGraph(1001, 5000);
         cmst::Window::instance()->printCurInfo();
         break;
+    case cmst::Menu::NEW_5001_10000 :
+        std::cout << "Running..." << std::endl;
+        cmst::Window::instance()->resetCurGraph(5001, 10000);
+        cmst::Window::instance()->printCurInfo();
+        break;
     }
 }
 
@@ -122,6 +170,29 @@ void processShowMenu(int option)
     */
     case cmst::Menu::SHOW_DELAUNAY :
         cmst::Window::instance()->resetShowDelaunay();
+        break;
+    }
+}
+
+void processTestMenu(int option)
+{
+    switch (option)
+    {
+    case cmst::Menu::TEST_5 :
+        std::cout << "Running..." << std::endl;
+
+        cmst::Window::instance()->generateTest(5);
+        std::cout << "Use left and right arrow keys to switch between test graphs" << std::endl;
+        cmst::Window::instance()->printTestInfo();
+        cmst::Window::instance()->printCurInfo();
+        break;
+    case cmst::Menu::TEST_20 :
+        std::cout << "Running..." << std::endl;
+
+        cmst::Window::instance()->generateTest(20);
+        std::cout << "Use left and right arrow keys to switch between test graphs" << std::endl;
+        cmst::Window::instance()->printTestInfo();
+        cmst::Window::instance()->printCurInfo();
         break;
     }
 }
