@@ -6,8 +6,15 @@ namespace cmst
 {
     enum Menu
     {
-        Refresh,
-        Quit,
+        NEW,
+        NEW_4_10,
+        NEW_11_100,
+        NEW_101_1000,
+        NEW_1001_5000,
+        SHOW,
+        SHOW_VORONOI,
+        SHOW_DELAUNAY,
+        QUIT,
     };
     class Window
     {
@@ -26,20 +33,42 @@ namespace cmst
 
             void resetCurGraph();
 
+            void resetCurGraph(int n);
+
+            void resetCurGraph(int low, int hi);
+
+            void resetShowVoronoi() { m_showVoronoi = !m_showVoronoi; }
+
+            void resetShowDelaunay() { m_showDelaunay = !m_showDelaunay; }
+
+            void resetWidth(int width) { m_width = width; }
+
+            void resetHeight(int height) { m_height = height; }
+
+            int width() const { return m_width; }
+
+            int height() const { return m_height; }
+
             /// Draw the current graph
             void draw();
 
+            void printCurInfo();
+
         private:
 
-            static Window* m_instance;
+            /// Constructor
+            Window() : m_curGraph(NULL), m_showVoronoi(false), m_showDelaunay(true) {}
 
-            Window() : m_curGraph(NULL) {}
+            static Window* m_instance;
 
             Window(const Window&);
 
             Graph2D* m_curGraph;
 
-            int menu; ///< The menu of current window
+            bool m_showVoronoi;
+            bool m_showDelaunay;
+
+            int m_width, m_height;
     };
 
 }

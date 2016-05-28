@@ -41,7 +41,7 @@ int main(int argc, char** argv)
 {
     Initialize();
 
-    cmst::Window::instance()->resetCurGraph();
+    cmst::Window::instance()->resetCurGraph(0);
 
     #ifdef FREEGLUT
 

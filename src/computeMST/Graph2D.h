@@ -9,6 +9,7 @@
 
 #include "Settings.h"
 #include "IndexEdge2D.h"
+#include "Timer.h"
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef CGAL::Delaunay_triangulation_2<K> Delaunay;
@@ -34,9 +35,27 @@ namespace cmst
 
         void drawDelaunay();
 
-        void drawVoronoi();
+        // void drawVoronoi();
 
         void drawMST();
+
+        double mstLength()
+        {
+            if (!m_mstDone)
+                Kruskal();
+            return m_mstLength;
+        }
+
+        int delaunayTime() const { return m_delaunayTime; }
+
+        int mstTime()
+        {
+            if (!m_mstDone)
+                Kruskal();
+            return m_mstTime;
+        }
+
+        int graphConstructTime() const { return m_graphConstructTime; }
 
     protected:
 
@@ -46,13 +65,22 @@ namespace cmst
 
         void initFather();
 
-    private:
-
         std::vector<Point2D> m_points;
         std::vector<IndexEdge2D> m_delaunayEdge;
         std::vector<IndexEdge2D> m_MSTEdge;
         std::vector<CGAL::Object> m_voronoiEdge;
         std::vector<std::vector<int>> m_graph;
         Delaunay m_delaunay;
+
+    private:
+
+        bool m_mstDone;
+
+        double m_mstLength;
+
+        int m_delaunayTime;
+        int m_mstTime;
+        int m_graphConstructTime;
+        int m_kMSTTime;
     };
 }

@@ -1,10 +1,12 @@
 #include "Graph2D.h"
 #include <GL/glut.h>
 
-cmst::Graph2D::Graph2D(std::vector<cmst::Point2D>& points) : m_points(points)
+cmst::Graph2D::Graph2D(std::vector<cmst::Point2D>& points) : m_points(points), m_mstDone(false)
 {
     int n = m_points.size();
     m_graph.assign(n, std::vector<int>());
+
+    cmst::Timer timer;
 
     #ifdef DEBUG
     debugout << "Constructing a graph of size " << n << std::endl;
@@ -16,13 +18,21 @@ cmst::Graph2D::Graph2D(std::vector<cmst::Point2D>& points) : m_points(points)
         vertices.push_back( K::Point_2(points[i].x(), points[i].y()) );
     m_delaunay.insert(vertices.begin(), vertices.end());
 
+    m_delaunayTime = timer.time();
+    timer.reset();
+
     // Store the Voronoi graph
+    // This consumes too much time, so is abandoned.
+    /*
     Delaunay::Edge_iterator eit;
     for (eit = m_delaunay.edges_begin(); eit != m_delaunay.edges_end(); eit++)
     {
         CGAL::Object o = m_delaunay.dual(eit);//边eit在其对偶图中所对应的边
         m_voronoiEdge.push_back(o);
     }
+
+    std::cout << timer.time() << std::endl;
+    */
 
     // Reconstruct my graph
     std::sort(m_points.begin(), m_points.end());
@@ -40,9 +50,14 @@ cmst::Graph2D::Graph2D(std::vector<cmst::Point2D>& points) : m_points(points)
         }
     }
 
+    m_graphConstructTime = timer.time();
+    timer.reset();
+
     int m = m_delaunayEdge.size();
     std::sort(m_delaunayEdge.begin(), m_delaunayEdge.end());
     m_delaunayEdge.erase( std::unique(m_delaunayEdge.begin(), m_delaunayEdge.end()), m_delaunayEdge.end() );
+    Kruskal();
+    m_mstTime = timer.time();
 
     for (int i = 0; i < m; i++)
     {
@@ -54,6 +69,7 @@ cmst::Graph2D::Graph2D(std::vector<cmst::Point2D>& points) : m_points(points)
 double cmst::Graph2D::Kruskal(bool naive /* = false*/)
 {
     m_MSTEdge.clear();
+    std::sort(m_delaunayEdge.begin(), m_delaunayEdge.end());
     cmst::Graph2D::initFather();
 
     double mstLength = 0.0f;
@@ -73,6 +89,9 @@ double cmst::Graph2D::Kruskal(bool naive /* = false*/)
             }
         }
     }
+
+    m_mstLength = mstLength;
+    m_mstDone = true;
 
     return mstLength;
 }
@@ -94,7 +113,7 @@ void cmst::Graph2D::initFather()
 void cmst::Graph2D::drawPoint()
 {
     glPointSize( 4.0f );   // 绘制前设置下点的大小和颜色
-    glColor3f( 1, 0, 0 );
+    glColor3f( 0, 0, 0 );
 
     glBegin( GL_POINTS );
     //glVertex3f( 56, 87, 0 );
@@ -129,6 +148,7 @@ void cmst::Graph2D::drawMST()
     glEnd();
 }
 
+/*
 void cmst::Graph2D::drawVoronoi()
 {
     Delaunay::Edge_iterator eit;//遍历Delaunay的所有边，绘制Delaunay图的对偶图，即Voronoi图
@@ -159,3 +179,4 @@ void cmst::Graph2D::drawVoronoi()
     }
     glDisable( GL_LINE_STIPPLE );//关闭点画模式
 }
+*/

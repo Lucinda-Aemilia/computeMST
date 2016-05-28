@@ -15,6 +15,10 @@ void reshape(int width, int height);
 
 void createGLUTMenus();
 
-void processMenuEvents(int option);
+void processNewMenu(int option);
+
+void processShowMenu(int option);
+
+void processMainMenu(int option);
 
 #endif // FREEGLUT
