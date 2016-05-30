@@ -125,6 +125,7 @@ void cmst::Graph2D::drawPoint()
 void cmst::Graph2D::drawDelaunay()
 {
     glColor3f( 0, 0, 1 );
+    // glColor3f( 1, 0, 0 );
     glLineWidth(1);
     glBegin(GL_LINES);
     for (int i = 0; i < m_delaunayEdge.size(); i++)
@@ -138,6 +139,7 @@ void cmst::Graph2D::drawDelaunay()
 void cmst::Graph2D::drawMST()
 {
     glColor3f( 245/255.0, 92/255.0, 229/255.0 );
+    // glColor3f(1, 1, 0);
     glLineWidth(3);
     glBegin(GL_LINES);
     for (int i = 0; i < m_MSTEdge.size(); i++)

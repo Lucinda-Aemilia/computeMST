@@ -1,0 +1,104 @@
+\hypertarget{classcmst_1_1_graph2_d}{}\section{cmst\+:\+:Graph2D Class Reference}
+\label{classcmst_1_1_graph2_d}\index{cmst\+::\+Graph2D@{cmst\+::\+Graph2D}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcmst_1_1_graph2_d_a36cf583f9e2e59da2bed94c8569914d2}{Graph2D} (std\+::vector$<$ \hyperlink{classcmst_1_1_point2_d}{Point2D} $>$ \&points)
+\item 
+double \hyperlink{classcmst_1_1_graph2_d_ac3ce0434f4c42c2ed2b7c7861b32710f}{Kruskal} (bool naive=false)
+\item 
+void {\bfseries draw\+Point} ()\hypertarget{classcmst_1_1_graph2_d_affec250ee22a067a28127b46ce976b90}{}\label{classcmst_1_1_graph2_d_affec250ee22a067a28127b46ce976b90}
+
+\item 
+void {\bfseries draw\+Delaunay} ()\hypertarget{classcmst_1_1_graph2_d_a2c4ed2ccd1fffc94c636929e531c4e3e}{}\label{classcmst_1_1_graph2_d_a2c4ed2ccd1fffc94c636929e531c4e3e}
+
+\item 
+void {\bfseries draw\+M\+ST} ()\hypertarget{classcmst_1_1_graph2_d_a96e388b819b351c8564eed9aecf58f7d}{}\label{classcmst_1_1_graph2_d_a96e388b819b351c8564eed9aecf58f7d}
+
+\item 
+double {\bfseries mst\+Length} ()\hypertarget{classcmst_1_1_graph2_d_aea22c23fdbb3b9e91671562cb19730ed}{}\label{classcmst_1_1_graph2_d_aea22c23fdbb3b9e91671562cb19730ed}
+
+\item 
+int {\bfseries delaunay\+Time} () const \hypertarget{classcmst_1_1_graph2_d_a93a1d4d5d2dd08796e37bcba6de79341}{}\label{classcmst_1_1_graph2_d_a93a1d4d5d2dd08796e37bcba6de79341}
+
+\item 
+int {\bfseries mst\+Time} ()\hypertarget{classcmst_1_1_graph2_d_a3b596946f310f7024036d2c6a18985a3}{}\label{classcmst_1_1_graph2_d_a3b596946f310f7024036d2c6a18985a3}
+
+\item 
+int {\bfseries graph\+Construct\+Time} () const \hypertarget{classcmst_1_1_graph2_d_ad4756aa3f617493bd8b3f6ecfe099449}{}\label{classcmst_1_1_graph2_d_ad4756aa3f617493bd8b3f6ecfe099449}
+
+\item 
+int {\bfseries point\+Num} () const \hypertarget{classcmst_1_1_graph2_d_a0b18b38d5813b2fdbe8f5a8d6f92575d}{}\label{classcmst_1_1_graph2_d_a0b18b38d5813b2fdbe8f5a8d6f92575d}
+
+\item 
+int {\bfseries edge\+Num} () const \hypertarget{classcmst_1_1_graph2_d_ae2474e4dd9964cd18fc9926a296c82fd}{}\label{classcmst_1_1_graph2_d_ae2474e4dd9964cd18fc9926a296c82fd}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries find\+Father} (int x)\hypertarget{classcmst_1_1_graph2_d_a0b860daa24f288eea5f490e12fcb67e2}{}\label{classcmst_1_1_graph2_d_a0b860daa24f288eea5f490e12fcb67e2}
+
+\item 
+void {\bfseries init\+Father} ()\hypertarget{classcmst_1_1_graph2_d_a5de76dfe02b4a13e0d3fe9a5e7ea7285}{}\label{classcmst_1_1_graph2_d_a5de76dfe02b4a13e0d3fe9a5e7ea7285}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ {\bfseries father}\hypertarget{classcmst_1_1_graph2_d_ad5d251f2f6f8b827af4404985fcec53c}{}\label{classcmst_1_1_graph2_d_ad5d251f2f6f8b827af4404985fcec53c}
+
+\item 
+std\+::vector$<$ \hyperlink{classcmst_1_1_point2_d}{Point2D} $>$ {\bfseries m\+\_\+points}\hypertarget{classcmst_1_1_graph2_d_a32456f3c630e34a56ce3109183142c10}{}\label{classcmst_1_1_graph2_d_a32456f3c630e34a56ce3109183142c10}
+
+\item 
+std\+::vector$<$ \hyperlink{classcmst_1_1_index_edge2_d}{Index\+Edge2D} $>$ {\bfseries m\+\_\+delaunay\+Edge}\hypertarget{classcmst_1_1_graph2_d_a6fe64b2078ec3c700a8a2e2bd77e2dae}{}\label{classcmst_1_1_graph2_d_a6fe64b2078ec3c700a8a2e2bd77e2dae}
+
+\item 
+std\+::vector$<$ \hyperlink{classcmst_1_1_index_edge2_d}{Index\+Edge2D} $>$ {\bfseries m\+\_\+\+M\+S\+T\+Edge}\hypertarget{classcmst_1_1_graph2_d_a1cc96b5251162964ac21f46955ac8271}{}\label{classcmst_1_1_graph2_d_a1cc96b5251162964ac21f46955ac8271}
+
+\item 
+std\+::vector$<$ C\+G\+A\+L\+::\+Object $>$ {\bfseries m\+\_\+voronoi\+Edge}\hypertarget{classcmst_1_1_graph2_d_a05e5ea6746bfd9d0ccd47308f4bbf1af}{}\label{classcmst_1_1_graph2_d_a05e5ea6746bfd9d0ccd47308f4bbf1af}
+
+\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ {\bfseries m\+\_\+graph}\hypertarget{classcmst_1_1_graph2_d_a5df9c78edb4f5c68da11b01e44061dc5}{}\label{classcmst_1_1_graph2_d_a5df9c78edb4f5c68da11b01e44061dc5}
+
+\item 
+Delaunay {\bfseries m\+\_\+delaunay}\hypertarget{classcmst_1_1_graph2_d_af19557df59901e6078c2038652c95623}{}\label{classcmst_1_1_graph2_d_af19557df59901e6078c2038652c95623}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{cmst\+::\+Graph2D@{cmst\+::\+Graph2D}!Graph2D@{Graph2D}}
+\index{Graph2D@{Graph2D}!cmst\+::\+Graph2D@{cmst\+::\+Graph2D}}
+\subsubsection[{\texorpdfstring{Graph2\+D(std\+::vector$<$ Point2\+D $>$ \&points)}{Graph2D(std::vector< Point2D > &points)}}]{\setlength{\rightskip}{0pt plus 5cm}cmst\+::\+Graph2\+D\+::\+Graph2D (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Point2D} $>$ \&}]{points}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_graph2_d_a36cf583f9e2e59da2bed94c8569914d2}{}\label{classcmst_1_1_graph2_d_a36cf583f9e2e59da2bed94c8569914d2}
+Constructor which does everything.
+
+
+\begin{DoxyItemize}
+\item Compute naive\+Edge which contains all edges
+\item Compute Delaunay graph 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\index{cmst\+::\+Graph2D@{cmst\+::\+Graph2D}!Kruskal@{Kruskal}}
+\index{Kruskal@{Kruskal}!cmst\+::\+Graph2D@{cmst\+::\+Graph2D}}
+\subsubsection[{\texorpdfstring{Kruskal(bool naive=false)}{Kruskal(bool naive=false)}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst\+::\+Graph2\+D\+::\+Kruskal (
+\begin{DoxyParamCaption}
+\item[{bool}]{naive = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_graph2_d_ac3ce0434f4c42c2ed2b7c7861b32710f}{}\label{classcmst_1_1_graph2_d_ac3ce0434f4c42c2ed2b7c7861b32710f}
+The Kruskal algorithm for finding the minimal spanning tree. \begin{DoxyReturn}{Returns}
+The length of the M\+ST. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Graph2\+D.\+h\item 
+Graph2\+D.\+cpp\end{DoxyCompactItemize}

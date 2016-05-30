@@ -71,6 +71,10 @@ void cmst::Window::printTestInfo()
     {
         std::cout << "\nCurrent test displaying: " << std::endl;
         std::cout << "== Number of tests: " << m_test.m_testGraphs.size() << std::endl;
+        std::cout << "== Delaunay Diagram compute time: " << std::endl;
+        std::cout << m_test.m_delaunayTimeStat.print() << std::endl;
+        std::cout << "== MST compute time: " << std::endl;
+        std::cout << m_test.m_mstTimeStat.print() << std::endl;
     }
 }
 
@@ -93,8 +97,12 @@ void cmst::Window::generateTest(int n)
     std::vector<cmst::Point2D> points;
     for (int i = 0; i < n; i++)
     {
-        points = cmst::TestcaseGenerator(10000, 10000);
+        points = cmst::TestcaseGenerator(6000, 6000);
         m_test.m_testGraphs.push_back(cmst::Graph2D(points));
+
+        m_test.m_delaunayTimeStat.record(m_test.m_testGraphs[i].delaunayTime()/1000.0);
+        m_test.m_graphConstructTimeStat.record(m_test.m_testGraphs[i].graphConstructTime()/1000.0);
+        m_test.m_mstTimeStat.record(m_test.m_testGraphs[i].mstTime()/1000.0);
     }
     m_curGraph = &m_test.m_testGraphs[0];
 }

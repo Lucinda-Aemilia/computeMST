@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Graph2D.h"
+#include "Stat.h"
 
 namespace cmst
 {
@@ -89,6 +90,10 @@ namespace cmst
                 bool m_displayTest;
                 int m_displayTestNum;
                 std::vector<Graph2D> m_testGraphs;
+
+                Stat m_delaunayTimeStat;
+                Stat m_graphConstructTimeStat;
+                Stat m_mstTimeStat;
 
                 Test() : m_displayTest(false), m_displayTestNum(0) {}
             } m_test;

@@ -57,3 +57,12 @@ src/computeMST/bin/*.*
 src/computeMST/obj/*.*
 src/computeMST/*.cbp
 src/computeMST/*.depend
+src/computeMST/*.layout
+
+# Tex documents
+*.aux
+*.log
+*.out
+*.synctex
+*.bak
+*.toc

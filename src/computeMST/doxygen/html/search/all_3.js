@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['triangle',['Triangle',['../class_triangle.html',1,'']]]
+  ['indexedge2d',['IndexEdge2D',['../classcmst_1_1_index_edge2_d.html',1,'cmst']]]
 ];

@@ -1,8 +1,0 @@
-warning: source ..\Graph2D.cpp is not a readable file or directory... skipping.
-warning: source ..\delaunay-triangulation\triangle.h is not a readable file or directory... skipping.
-warning: source ..\delaunay-triangulation\delaunay.h is not a readable file or directory... skipping.
-warning: source ..\delaunay-triangulation\edge.h is not a readable file or directory... skipping.
-warning: source ..\delaunay-triangulation\triangle.cpp is not a readable file or directory... skipping.
-warning: source ..\delaunay-triangulation\delaunay.cpp is not a readable file or directory... skipping.
-warning: source ..\delaunay-triangulation\vector2.h is not a readable file or directory... skipping.
-warning: source ..\main.cpp is not a readable file or directory... skipping.

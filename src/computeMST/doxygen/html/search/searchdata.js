@@ -1,8 +1,8 @@
 var indexSectionsWithContent =
 {
-  0: "degtv",
-  1: "degtv",
-  2: "g"
+  0: "degikpstw",
+  1: "egipstw",
+  2: "dgkp"
 };
 
 var indexSectionNames =
