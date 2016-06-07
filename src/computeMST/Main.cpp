@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <array>
 #include <ctime>
+#include <iomanip>
 
 #include "Graph2D.h"
 #include "TestcaseGenerator.h"
@@ -40,6 +41,7 @@ void CleanUp()
 int main(int argc, char** argv)
 {
     Initialize();
+    std::cout << std::fixed << std::setprecision(4);
 
     cmst::Window::instance()->resetCurGraph(0);
 

@@ -1,0 +1,56 @@
+Graph information: 
+Points: 
+= Point (840.012, 5119.17)
+= Point (1886.99, 8806.2)
+= Point (5135.33, 4241.43)
+= Point (6589.88, 9670.46)
+= Point (9528.89, 5102.23)
+= Point (9572.03, 6897.19)
+
+Delaunay Edges:
+= Indexed Edge 4, 5
+     length: 1795.48
+     Point (9528.89, 5102.23) Point (9572.03, 6897.19)
+= Indexed Edge 0, 1
+     length: 3832.8
+     Point (840.012, 5119.17) Point (1886.99, 8806.2)
+= Indexed Edge 3, 5
+     length: 4072.37
+     Point (6589.88, 9670.46) Point (9572.03, 6897.19)
+= Indexed Edge 0, 2
+     length: 4384.08
+     Point (840.012, 5119.17) Point (5135.33, 4241.43)
+= Indexed Edge 2, 4
+     length: 4477.09
+     Point (5135.33, 4241.43) Point (9528.89, 5102.23)
+= Indexed Edge 1, 3
+     length: 4781.65
+     Point (1886.99, 8806.2) Point (6589.88, 9670.46)
+= Indexed Edge 2, 5
+     length: 5170.81
+     Point (5135.33, 4241.43) Point (9572.03, 6897.19)
+= Indexed Edge 1, 2
+     length: 5602.57
+     Point (1886.99, 8806.2) Point (5135.33, 4241.43)
+= Indexed Edge 2, 3
+     length: 5620.51
+     Point (5135.33, 4241.43) Point (6589.88, 9670.46)
+
+MST calculated: 
+Length: 18561.8
+MST edges: 
+= Indexed Edge 4, 5
+     length: 1795.48
+     Point (9528.89, 5102.23) Point (9572.03, 6897.19)
+= Indexed Edge 0, 1
+     length: 3832.8
+     Point (840.012, 5119.17) Point (1886.99, 8806.2)
+= Indexed Edge 3, 5
+     length: 4072.37
+     Point (6589.88, 9670.46) Point (9572.03, 6897.19)
+= Indexed Edge 0, 2
+     length: 4384.08
+     Point (840.012, 5119.17) Point (5135.33, 4241.43)
+= Indexed Edge 2, 4
+     length: 4477.09
+     Point (5135.33, 4241.43) Point (9528.89, 5102.23)

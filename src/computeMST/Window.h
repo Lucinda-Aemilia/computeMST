@@ -8,6 +8,7 @@ namespace cmst
     /// Return values for GLUT menus
     enum Menu
     {
+        LOAD,
         NEW,
         NEW_4_10,
         NEW_11_100,
@@ -21,6 +22,7 @@ namespace cmst
         TEST_5,
         TEST_20,
         VALIDATOR,
+        PRINT,
         QUIT,
     };
 
@@ -65,6 +67,8 @@ namespace cmst
             /// \param low The least number of points to be generated.
             /// \param hi The most number of points to be generated.
             void resetCurGraph(int low, int hi);
+
+            bool load();
 
             // void resetShowVoronoi() { m_showVoronoi = !m_showVoronoi; }
 
@@ -143,6 +147,11 @@ namespace cmst
                 }
             }
 
+            bool printToFile()
+            {
+                return m_curGraph->print();
+            }
+
             void changeMSTDisplay(int direc)
             {
                 m_curGraph->changeSTDisplay(direc);
@@ -163,7 +172,7 @@ namespace cmst
                 if (!m_curGraph->validateDone())
                 {
                     std::cout << "Running..." << std::endl;
-                    m_curGraph->Prim();
+                    m_curGraph->naiveKruskal();
                 }
             }
 

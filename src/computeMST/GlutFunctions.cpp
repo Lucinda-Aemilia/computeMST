@@ -137,10 +137,12 @@ void createGLUTMenus()
 	glutAddMenuEntry("Test (20)", cmst::Menu::TEST_20);
 
 	int mainMenu = glutCreateMenu(processMainMenu);
+	glutAddMenuEntry("Load", cmst::Menu::LOAD);
 	glutAddSubMenu("Generate", newMenu);
 	glutAddSubMenu("Show", showMenu);
-	glutAddSubMenu("Test", testMenu);
+	glutAddSubMenu("Run Test", testMenu);
 	glutAddMenuEntry("Validate", cmst::Menu::VALIDATOR);
+	glutAddMenuEntry("Print", cmst::Menu::PRINT);
 	glutAddMenuEntry("Quit", cmst::Menu::QUIT);
 
 	// attach the menu to the right button
@@ -219,12 +221,29 @@ void processTestMenu(int option)
 
 void processMainMenu(int option)
 {
+    std::string file;
 	switch (option)
 	{
+    case cmst::Menu::LOAD :
+        std::cout << "\nPlease input the name and path of the file" << std::endl;
+        std::cout << "Points has to be in the range [0, " << MAX_X << "]*[0, " << MAX_Y << "]" << std::endl;
+        std::cout << "See testcase/example_input.txt for input format" << std::endl;
+        if (!cmst::Window::instance()->load())
+            std::cout << "Unable to load information" << std::endl;
+        else
+            std::cout << "Successfully loaded the graph" << std::endl;
+        cmst::Window::instance()->printCurInfo();
+        break;
     case cmst::Menu::VALIDATOR :
         cmst::Window::instance()->runValidate();
         cmst::Window::instance()->printSTInfo();
 	    break;
+    case cmst::Menu::PRINT :
+        if (cmst::Window::instance()->printToFile())
+            std::cout << "\nSuccessfully print current graph information to file " << "graph.txt" << std::endl;
+        else
+            std::cout << "\nFailed to print current graph information to file " << "graph.txt" << std::endl;
+        break;
     case cmst::Menu::QUIT :
         exit(0);
         break;

@@ -1,6 +1,7 @@
 #include "Graph2D.h"
 #include <GL/glut.h>
 #include <queue>
+#include <fstream>
 #include <algorithm>
 #include <cstring>
 
@@ -9,6 +10,7 @@ cmst::Graph2D::Graph2D(std::vector<cmst::Point2D>& points) : m_points(points),
 {
     int n = m_points.size();
     m_graph.assign(n, std::vector<int>());
+    m_ST.push_back(ST());
 
     cmst::Timer timer;
 
@@ -99,10 +101,12 @@ double cmst::Graph2D::Kruskal()
     return mstLength;
 }
 
-double cmst::Graph2D::Prim()
+double cmst::Graph2D::naiveKruskal()
 {
     int n = m_points.size();
     std::vector<cmst::IndexEdge2D> edges;
+    double mstLength = 0.0;
+    Timer timer;
 
     // Construct all edges
     if (m_edges.empty())
@@ -114,74 +118,22 @@ double cmst::Graph2D::Prim()
         std::sort(m_edges.begin(), m_edges.end());
     }
 
-    double mstLength = 0.0f;
+    cmst::Graph2D::initFather();
 
-    // std::priority_queue<cmst::IndexEdge2D, std::vector<cmst::IndexEdge2D>, std::less<cmst::IndexEdge2D>> q;
-    std::vector<cmst::IndexEdge2D> heap;
-
-
-    int curNode = 0;
-    bool visit[n];
-    memset(visit, 0, sizeof(visit));
-    visit[0] = true;
-    for (int i = 1; i < n; i++)
+    int m = m_edges.size();
+    for (int i = 0; i < m; i++)
     {
-        // Update
-        for (int j = 0; j < n; j++)
+        int fa1 = cmst::Graph2D::findFather(m_edges[i].startIndex());
+        int fa2 = cmst::Graph2D::findFather(m_edges[i].endIndex());
+        if (fa1 != fa2)
         {
-            if (!visit[j])
-            {
-                //q.push(cmst::IndexEdge2D(m_points[curNode], m_points[j], curNode, j));
-                heap.push_back(cmst::IndexEdge2D(m_points[curNode], m_points[j], curNode, j));
-                std::push_heap(heap.begin(), heap.end(), std::less<cmst::IndexEdge2D>());
-            }
+            father[fa1] = fa2;
+            edges.push_back(m_edges[i]);
+            mstLength += m_edges[i].length();
         }
-
-        // Clean
-
-        /*std::sort_heap(heap.begin(), heap.end(), std::less<cmst::IndexEdge2D>());
-        for (int i = 0; i < heap.size(); i++)
-            std::cout << heap[i].length() << ' ' << heap[i].startIndex() << ' ' << heap[i].endIndex() << std::endl;
-
-
-        heap.erase( std::unique(heap.begin(), heap.end(), std::less<cmst::IndexEdge2D>()), heap.end() );
-        if (heap.size() > n)
-            heap.erase(heap.end() - n, heap.end());
-        std::make_heap(heap.begin(), heap.end(), std::less<cmst::IndexEdge2D>());*/
-
-
-        /*
-        while (!q.empty() && visit[q.top().endIndex()] && visit[q.top().startIndex()])
-            q.pop();
-        if (q.empty())
-            break;
-        cmst::IndexEdge2D e(q.top());
-        q.pop();
-        */
-
-        cmst::IndexEdge2D e;
-        if (heap.empty())
-            break;
-        while (!heap.empty())
-        {
-            std::pop_heap(heap.begin(), heap.end(), std::less<cmst::IndexEdge2D>());
-            e = heap.back();
-            heap.pop_back();
-            if (!visit[e.startIndex()] || !visit[e.endIndex()])
-                break;
-        }
-
-
-        std::cout << "min length: " << e.length() << std::endl;
-        std::cout << std::endl;
-
-        mstLength += e.length();
-        edges.push_back(e);
-        curNode = visit[e.endIndex()] ? e.startIndex() : e.endIndex();
-        visit[curNode] = true;
     }
 
-    m_ST.push_back(ST(edges, 0, mstLength));
+    m_ST.push_back(ST(edges, timer.time(), mstLength));
     m_validateDone = true;
     if (m_displaySTNum == -1)
         m_displaySTNum = m_ST.size() - 1;
@@ -244,7 +196,7 @@ void cmst::Graph2D::drawMST()
     glEnd();
 
     // Draw the test MST
-    if (m_ST.size() > 0)
+    if (m_ST.size() > 0 && m_displaySTNum != -1)
     {
         glEnable( GL_LINE_STIPPLE );
         glLineWidth(1);
@@ -260,6 +212,35 @@ void cmst::Graph2D::drawMST()
         glEnd();
         glDisable( GL_LINE_STIPPLE );
     }
+}
+
+bool cmst::Graph2D::print(std::string file/* = "graph.txt"*/)
+{
+    std::ofstream out(file.c_str());
+    if (!out.is_open())
+        return false;
+    out << "Graph information: " << std::endl;
+    out << "Points: " << std::endl;
+    for (int i = 0; i < m_points.size(); i++)
+        out << "= " << m_points[i] << std::endl;
+
+    out << "\nDelaunay Edges:" << std::endl;
+    for (int i = 0; i < m_delaunayEdge.size(); i++)
+        out << "= " << m_delaunayEdge[i] << std::endl;
+
+    if (m_mstDone)
+    {
+        out << "\nMST calculated: " << std::endl;
+        out << "Length: " << m_mstLength << std::endl;
+        out << "MST edges: " << std::endl;
+        for (int i = 0; i < m_MSTEdge.size(); i++)
+            out << "= " << m_MSTEdge[i] << std::endl;
+    }
+    else
+        out << "\nMST not done" << std::endl;
+
+    out.close();
+    return true;
 }
 
 /*

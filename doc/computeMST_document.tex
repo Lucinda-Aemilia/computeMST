@@ -77,30 +77,30 @@
 \part{Introduction}
 
     \chapter{Purpose}
-
-    \chapter{Scope}
-
-    \chapter{Overview}
-
-        (II) Project: On Constructing Minimum Spanning Trees (Difficulty: 1.1)
+    
+        This software design document describes the architecture and system design of project ComputeMST. This is a homework of Fundamentals of Object-Oriented Programming class. The homework requirement is as follows:
         
+         (II) Project: On Constructing Minimum Spanning Trees (Difficulty: 1.1)
+
         Requirements and TIPS:
-        
+
         (1) Implement the MST algorithm based on Voronoi diagram for computing Euclidean minimum spanning trees in 2D plane.
-        
+
         (2) Please refer to the following link for MST construction algorithms. Either Prim's or Kruskal's algorithm is ok. Please refer to Page 39 for the idea of using Voronoi for MST computation. \url{http://www.cs.princeton.edu/courses/archive/spr07/cos226/lectures/mst.pdf}
-        
+
         (3) Use the CGAL Library (http://www.cgal.org/) for constructing the Voronoi diagram and Delaunay triangulation.
-        
+
         (4) Randomly generate 5 different testcases with more than 5000 points without duplicates to test the implemented method.
-        
+
         (5) It is suggested that a validity checking function be implemented to verify the experimental results are correct. For example, you may directly apply Prim's or Kruskal's MST algorithm on the testcase to verify that the MST trees are correct.
-        
+
         (6) Report the statistics of the experimental results, e.g., total runtime, total number of points, total length of the MST edges, etc. Figures and tables on the experimental results are welcome.
-        
+
         (7) [This is not mandatory to finish, but it is a challenging topic] Again, can you compute the top K (1 <= K <= 20) minimum spanning trees?
 
-    \chapter{Reference Material}
+    \chapter{Scope}
+    
+        I implemented the first six requirements of the homework, mainly using CGAL and Kruskal's MST algorithm.
 
     \chapter{Definitions and Acronyms}
 
@@ -115,6 +115,8 @@
 \chapter{System Architecture}
 
     \chapter{Architectural Design} % 将整个系统划分为功能模块，介绍每个模块之间的功能和相互关系
+    
+        The program can be divided into two parts: the computational part and the display part. The computational part 
 
     \chapter{Decomposition Description}
 

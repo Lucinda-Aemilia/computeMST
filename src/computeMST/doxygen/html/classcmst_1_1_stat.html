@@ -46,8 +46,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -106,27 +106,21 @@ $(document).ready(function(){initNavTree('classcmst_1_1_stat.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcmst_1_1_stat-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">cmst::Stat Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;Stat.h&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for cmst::Stat:</div>
-<div class="dyncontent">
-<div class="center"><img src="classcmst_1_1_stat__coll__graph.png" border="0" usemap="#cmst_1_1_stat_coll__map" alt="Collaboration graph"/></div>
-<!-- MAP 0 -->
-</div>
+<p><code>#include &lt;<a class="el" href="_stat_8h_source.html">Stat.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1f07a880a815c7efe4e4d244fb0c6b7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_stat.html#a1f07a880a815c7efe4e4d244fb0c6b7d">Stat</a> ()</td></tr>
 <tr class="separator:a1f07a880a815c7efe4e4d244fb0c6b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1e2fe7c367da505a6b5f1fb5eb619d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_stat.html#ab1e2fe7c367da505a6b5f1fb5eb619d2">record</a> (double data)</td></tr>
-<tr class="memdesc:ab1e2fe7c367da505a6b5f1fb5eb619d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record a datum and update m_min, m_max.  <a href="#ab1e2fe7c367da505a6b5f1fb5eb619d2">More...</a><br /></td></tr>
+<tr class="memitem:ab1e2fe7c367da505a6b5f1fb5eb619d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1e2fe7c367da505a6b5f1fb5eb619d2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_stat.html#ab1e2fe7c367da505a6b5f1fb5eb619d2">record</a> (double data)</td></tr>
+<tr class="memdesc:ab1e2fe7c367da505a6b5f1fb5eb619d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record a datum and update m_min, m_max. <br /></td></tr>
 <tr class="separator:ab1e2fe7c367da505a6b5f1fb5eb619d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a6a92dee526145fb289d79a94afe3ae"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_stat.html#a1a6a92dee526145fb289d79a94afe3ae">min</a> () const </td></tr>
 <tr class="separator:a1a6a92dee526145fb289d79a94afe3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,21 +132,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa40d8d516e7f866146d91866d63faf2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfbaefc3a4174643a2eb282251fd86a5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_stat.html#abfbaefc3a4174643a2eb282251fd86a5">standardDeviation</a> ()</td></tr>
 <tr class="separator:abfbaefc3a4174643a2eb282251fd86a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03d1a0f52e2ea72cfab11a426726aea4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_stat.html#a03d1a0f52e2ea72cfab11a426726aea4">print</a> ()</td></tr>
+<tr class="memitem:a03d1a0f52e2ea72cfab11a426726aea4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03d1a0f52e2ea72cfab11a426726aea4"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr>
 <tr class="separator:a03d1a0f52e2ea72cfab11a426726aea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a2f503d58c0bc9eed8bd6d2c46edffbf4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_stat.html#a2f503d58c0bc9eed8bd6d2c46edffbf4">m_min</a></td></tr>
-<tr class="separator:a2f503d58c0bc9eed8bd6d2c46edffbf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93f52caf45b449d34c87fcbb0ebaa93e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_stat.html#a93f52caf45b449d34c87fcbb0ebaa93e">m_max</a></td></tr>
-<tr class="separator:a93f52caf45b449d34c87fcbb0ebaa93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fc650572d2cea2bae2190188f3a03cf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_stat.html#a0fc650572d2cea2bae2190188f3a03cf">m_mean</a></td></tr>
-<tr class="separator:a0fc650572d2cea2bae2190188f3a03cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6321c420c546603588be13de4628957"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_stat.html#aa6321c420c546603588be13de4628957">m_standardDeviation</a></td></tr>
-<tr class="separator:aa6321c420c546603588be13de4628957"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c6fad792b12d961df5ea2b091cb39f4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_stat.html#a8c6fad792b12d961df5ea2b091cb39f4">m_data</a></td></tr>
-<tr class="separator:a8c6fad792b12d961df5ea2b091cb39f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Simple statistics.</p>
@@ -277,14 +259,6 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classcmst_1_1_stat_aa40d8d516e7f866146d91866d63faf2b_icgraph.png" border="0" usemap="#classcmst_1_1_stat_aa40d8d516e7f866146d91866d63faf2b_icgraph" alt=""/></div>
-<!-- MAP 1 -->
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a1a6a92dee526145fb289d79a94afe3ae"></a>
@@ -317,79 +291,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a03d1a0f52e2ea72cfab11a426726aea4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string cmst::Stat::print </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classcmst_1_1_stat_a03d1a0f52e2ea72cfab11a426726aea4_cgraph.png" border="0" usemap="#classcmst_1_1_stat_a03d1a0f52e2ea72cfab11a426726aea4_cgraph" alt=""/></div>
-<!-- MAP 2 -->
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classcmst_1_1_stat_a03d1a0f52e2ea72cfab11a426726aea4_icgraph.png" border="0" usemap="#classcmst_1_1_stat_a03d1a0f52e2ea72cfab11a426726aea4_icgraph" alt=""/></div>
-<!-- MAP 3 -->
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="ab1e2fe7c367da505a6b5f1fb5eb619d2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cmst::Stat::record </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Record a datum and update m_min, m_max. </p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classcmst_1_1_stat_ab1e2fe7c367da505a6b5f1fb5eb619d2_icgraph.png" border="0" usemap="#classcmst_1_1_stat_ab1e2fe7c367da505a6b5f1fb5eb619d2_icgraph" alt=""/></div>
-<!-- MAP 4 -->
-</div>
-</p>
-
-</div>
-</div>
 <a class="anchor" id="abfbaefc3a4174643a2eb282251fd86a5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -418,132 +319,18 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classcmst_1_1_stat_abfbaefc3a4174643a2eb282251fd86a5_cgraph.png" border="0" usemap="#classcmst_1_1_stat_abfbaefc3a4174643a2eb282251fd86a5_cgraph" alt=""/></div>
-<!-- MAP 5 -->
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classcmst_1_1_stat_abfbaefc3a4174643a2eb282251fd86a5_icgraph.png" border="0" usemap="#classcmst_1_1_stat_abfbaefc3a4174643a2eb282251fd86a5_icgraph" alt=""/></div>
-<!-- MAP 6 -->
-</div>
-</p>
-
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a8c6fad792b12d961df5ea2b091cb39f4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;double&gt; cmst::Stat::m_data</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a93f52caf45b449d34c87fcbb0ebaa93e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double cmst::Stat::m_max</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a0fc650572d2cea2bae2190188f3a03cf"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double cmst::Stat::m_mean</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a2f503d58c0bc9eed8bd6d2c46edffbf4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double cmst::Stat::m_min</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aa6321c420c546603588be13de4628957"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double cmst::Stat::m_standardDeviation</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="_stat_8h_source.html">Stat.h</a></li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacecmst.html">cmst</a></li><li class="navelem"><a class="el" href="classcmst_1_1_stat.html">Stat</a></li>
-    <li class="footer">Generated on Mon Jun 6 2016 19:11:08 for computeMST by
+    <li class="navelem"><b>cmst</b></li><li class="navelem"><a class="el" href="classcmst_1_1_stat.html">Stat</a></li>
+    <li class="footer">Generated on Tue Jun 7 2016 20:36:08 for computeMST by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

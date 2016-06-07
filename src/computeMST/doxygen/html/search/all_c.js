@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['operator_3c',['operator&lt;',['../class_vec2f.html#a32bddb3312af7d2158235c8bbb886324',1,'Vec2f::operator&lt;()'],['../classcmst_1_1_edge2_d.html#a58bd75e0a118f5192f5811cfacb6e7ac',1,'cmst::Edge2D::operator&lt;()'],['../classcmst_1_1_point2_d.html#a07c101f4fb6663aaa6c32de475a149fe',1,'cmst::Point2D::operator&lt;()']]],
-  ['operator_3c_3c',['operator&lt;&lt;',['../class_edge.html#a05e7e89dad7ec4c7ea81da0b1f487a78',1,'Edge::operator&lt;&lt;()'],['../class_triangle.html#a865c96e9af49664ea93f369217f1f4f4',1,'Triangle::operator&lt;&lt;()'],['../class_vec2f.html#a364e82f5d9f4720d6fc56554f4fbd69e',1,'Vec2f::operator&lt;&lt;()'],['../classcmst_1_1_edge2_d.html#ae312c205375d240b1c8bc889f2c1c55e',1,'cmst::Edge2D::operator&lt;&lt;()'],['../classcmst_1_1_index_edge2_d.html#a07a17f57bc3f2f18232965531f0b62b4',1,'cmst::IndexEdge2D::operator&lt;&lt;()'],['../classcmst_1_1_point2_d.html#a538910ff384fb4f3f02d785a99e222cf',1,'cmst::Point2D::operator&lt;&lt;()']]],
-  ['operator_3d_3d',['operator==',['../class_edge.html#a23eeba05e956cd2a398280537f0c518f',1,'Edge::operator==()'],['../class_triangle.html#a12315ef4973d7f56ca51760330391e05',1,'Triangle::operator==()'],['../class_vec2f.html#afb67dd49ed0ff76dbf4c4bd5344e2b59',1,'Vec2f::operator==()'],['../classcmst_1_1_edge2_d.html#a1609ff699d629d691bf054acd2deb187',1,'cmst::Edge2D::operator==()'],['../classcmst_1_1_point2_d.html#a9544f3c9e53240832f8323e75d75a042',1,'cmst::Point2D::operator==()']]]
+  ['st',['ST',['../structcmst_1_1_graph2_d_1_1_s_t.html',1,'cmst::Graph2D']]],
+  ['standarddeviation',['standardDeviation',['../classcmst_1_1_stat.html#abfbaefc3a4174643a2eb282251fd86a5',1,'cmst::Stat']]],
+  ['start',['start',['../classcmst_1_1_edge2_d.html#ad77218c63818fe92f43033ba1487ab89',1,'cmst::Edge2D']]],
+  ['stat',['Stat',['../classcmst_1_1_stat.html',1,'cmst']]],
+  ['stat',['Stat',['../classcmst_1_1_stat.html#a1f07a880a815c7efe4e4d244fb0c6b7d',1,'cmst::Stat']]],
+  ['swap_5fpoints',['swap_points',['../classcmst_1_1_edge2_d.html#aeb88dc66750f6c7967de0918e906abf4',1,'cmst::Edge2D']]]
 ];

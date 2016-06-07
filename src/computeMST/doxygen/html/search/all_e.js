@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quit',['QUIT',['../namespacecmst.html#a8dff7ccfde8a2770160b5f8dbf81c3b9af46a16cac81f794824d0d87fb5588e33',1,'cmst']]]
+  ['width',['width',['../classcmst_1_1_window.html#a5fc4ccbd9afed56cd17d341269028da2',1,'cmst::Window']]],
+  ['window',['Window',['../classcmst_1_1_window.html',1,'cmst']]]
 ];

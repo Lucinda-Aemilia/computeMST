@@ -1,4 +1,5 @@
 #include <cstring>
+#include <fstream>
 
 #include <GL/glut.h>
 
@@ -52,6 +53,26 @@ void cmst::Window::resetCurGraph(int low, int hi)
 {
     std::vector<cmst::Point2D> points(cmst::TestcaseGenerator(low, hi));
     resetCurGraph(points);
+}
+
+bool cmst::Window::load()
+{
+    std::string file;
+    std::cin >> file;
+    std::ifstream in(file.c_str());
+    if (!in.is_open())
+        return false;
+    std::vector<cmst::Point2D> points;
+    double x, y;
+    while (in >> x >> y)
+    {
+        if (x < 0 || x > MAX_X) continue;
+        if (y < 0 || y > MAX_Y) continue;
+        points.push_back(cmst::Point2D(x, y));
+    }
+    resetCurGraph(points);
+    in.close();
+    return true;
 }
 
 void cmst::Window::printCurInfo()

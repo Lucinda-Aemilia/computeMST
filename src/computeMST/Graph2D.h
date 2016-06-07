@@ -31,7 +31,7 @@ namespace cmst
         /// \return The length of the MST.
         double Kruskal();
 
-        double Prim();
+        double naiveKruskal();
 
         void drawPoint();
 
@@ -40,6 +40,8 @@ namespace cmst
         // void drawVoronoi();
 
         void drawMST();
+
+        bool print(std::string file = "graph.txt");
 
         void changeSTDisplay(int direc)
         {
@@ -64,7 +66,11 @@ namespace cmst
                 std::cout << "== Length: " << m_ST[m_displaySTNum].m_length << std::endl;
                 // std::cout << "== Delaunay Triangulation Compute Time: " << m_curGraph->delaunayTime()/1000.0 << std::endl;
                 // std::cout << "== Graph construct time: " << m_curGraph->graphConstructTime()/1000.0 << std::endl;
-                // std::cout << "== MST Compute Time: " << m_curGraph->mstTime()/1000.0 << std::endl;
+                std::cout << "== MST Compute Time: " << m_ST[m_displaySTNum].m_stTime/1000.0 << std::endl;
+                if (std::abs(m_ST[m_displaySTNum].m_length - m_mstLength) < EPS_MIN)
+                    std::cout << "Correct MST!" << std::endl;
+                else
+                    std::cout << "Failed!" << std::endl;
             }
         }
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['height',['height',['../classcmst_1_1_window.html#a6fc02b2afee52c0f71b6a3bd39c9210f',1,'cmst::Window']]]
+  ['kruskal',['Kruskal',['../classcmst_1_1_graph2_d.html#a034d2d37b2d106c0e25d7ad7bc67907e',1,'cmst::Graph2D']]]
 ];
