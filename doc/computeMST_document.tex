@@ -1,9 +1,27 @@
-\documentclass{book}
-\usepackage[bookmarks=true, colorlinks, linkcolor=black]{hyperref}
+\documentclass[oneside]{book}
+\usepackage[bookmarks=true, colorlinks, linkcolor=gray]{hyperref}
 \usepackage{cite}
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{color}
+
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage[export]{adjustbox} % also loads graphicx
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+
+
+% \renewcommand\thesection{\arabic{section}}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
@@ -11,11 +29,11 @@
 
 \lstset{ %
   backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
-  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
   breaklines=true,                 % sets automatic line breaking
   captionpos=b,                    % sets the caption-position to bottom
-  commentstyle=\color{mygreen},    % comment style
+  commentstyle=\color{mygreen}\ttfamily,    % comment style
   frame=single,	                   % adds a frame around the code
   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
   keywordstyle=\color{blue},       % keyword style
@@ -28,6 +46,20 @@
   stringstyle=\color{mymauve},     % string literal style
   tabsize=2,	                   % sets default tabsize to 2 spaces
 }
+
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+
+% Add search path
+\makeatletter
+\providecommand*\input@path{}
+\newcommand*\addinputpath[1]{%
+  \expandafter\def\expandafter\input@path
+  \expandafter{\input@path#1}}%
+\addinputpath{{doxygen/}}
+\makeatother
+
+\graphicspath{{doxygen/}}
 
 \title{Individual Project 2\\ Constructing Minimum Spanning Trees\\ Software Design Document}
 \author{Zhang Huimeng, 2015011280}
@@ -44,15 +76,33 @@
 
 \part{Introduction}
 
-    \section{Purpose}
+    \chapter{Purpose}
 
-    \section{Scope}
+    \chapter{Scope}
 
-    \section{Overview}
+    \chapter{Overview}
 
-    \section{Reference Material}
+        (II) Project: On Constructing Minimum Spanning Trees (Difficulty: 1.1)
+        
+        Requirements and TIPS:
+        
+        (1) Implement the MST algorithm based on Voronoi diagram for computing Euclidean minimum spanning trees in 2D plane.
+        
+        (2) Please refer to the following link for MST construction algorithms. Either Prim's or Kruskal's algorithm is ok. Please refer to Page 39 for the idea of using Voronoi for MST computation. \url{http://www.cs.princeton.edu/courses/archive/spr07/cos226/lectures/mst.pdf}
+        
+        (3) Use the CGAL Library (http://www.cgal.org/) for constructing the Voronoi diagram and Delaunay triangulation.
+        
+        (4) Randomly generate 5 different testcases with more than 5000 points without duplicates to test the implemented method.
+        
+        (5) It is suggested that a validity checking function be implemented to verify the experimental results are correct. For example, you may directly apply Prim's or Kruskal's MST algorithm on the testcase to verify that the MST trees are correct.
+        
+        (6) Report the statistics of the experimental results, e.g., total runtime, total number of points, total length of the MST edges, etc. Figures and tables on the experimental results are welcome.
+        
+        (7) [This is not mandatory to finish, but it is a challenging topic] Again, can you compute the top K (1 <= K <= 20) minimum spanning trees?
 
-    \section{Definitions and Acronyms}
+    \chapter{Reference Material}
+
+    \chapter{Definitions and Acronyms}
 
 \clearpage
 
@@ -62,44 +112,44 @@
 \clearpage
 
 
-\part{System Architecture}
+\chapter{System Architecture}
 
-    \section{Architectural Design} % 将整个系统划分为功能模块，介绍每个模块之间的功能和相互关系
+    \chapter{Architectural Design} % 将整个系统划分为功能模块，介绍每个模块之间的功能和相互关系
 
-    \section{Decomposition Description}
+    \chapter{Decomposition Description}
 
-    \section{Design Rationale}
+    \chapter{Design Rationale}
 
 \clearpage
 
 
 \part{Data Design}
 
-    \section{Data Description} % data structure, data storage, process and organization
+    \chapter{Data Description} % data structure, data storage, process and organization
 
-    \section{Data Dictionary} % list the objects and its attributes, methods and method parameters
-
-\clearpage
-
-
-\part{Component Design}
+    \chapter{Data Dictionary} % list the objects and its attributes, methods and method parameters
 
 \clearpage
 
 
 \part{Human Interface Design}
 
-    \section{Overview of Human Interface}
+    \chapter{Overview of Human Interface}
 
-    \section{Screen Images}
+    \chapter{Screen Images}
 
-    \section{Screen Objects and Actions}
+    \chapter{Screen Objects and Actions}
 
 \clearpage
 
 
 \part{Design Patterns}
 
+\clearpage
+
+
+\part{Component Design}
+\input{Component_Design}
 \clearpage
 
 

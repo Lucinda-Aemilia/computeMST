@@ -46,8 +46,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -107,6 +107,7 @@ $(document).ready(function(){initNavTree('classcmst_1_1_edge2_d.html','');});
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classcmst_1_1_edge2_d-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -114,51 +115,379 @@ $(document).ready(function(){initNavTree('classcmst_1_1_edge2_d.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Inherited by <a class="el" href="classcmst_1_1_index_edge2_d.html">cmst::IndexEdge2D</a>.</p>
+<p><code>#include &lt;Edge2D.h&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for cmst::Edge2D:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcmst_1_1_edge2_d__inherit__graph.png" border="0" usemap="#cmst_1_1_edge2_d_inherit__map" alt="Inheritance graph"/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Collaboration diagram for cmst::Edge2D:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcmst_1_1_edge2_d__coll__graph.png" border="0" usemap="#cmst_1_1_edge2_d_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 1 -->
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0d1166315f84757395e889d3225e2ae0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d1166315f84757395e889d3225e2ae0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Edge2D</b> (const <a class="el" href="classcmst_1_1_point2_d.html">Point2D</a> &amp;start, const <a class="el" href="classcmst_1_1_point2_d.html">Point2D</a> &amp;end)</td></tr>
+<tr class="memitem:a0d1166315f84757395e889d3225e2ae0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_edge2_d.html#a0d1166315f84757395e889d3225e2ae0">Edge2D</a> (const <a class="el" href="classcmst_1_1_point2_d.html">Point2D</a> &amp;<a class="el" href="classcmst_1_1_edge2_d.html#ad77218c63818fe92f43033ba1487ab89">start</a>, const <a class="el" href="classcmst_1_1_point2_d.html">Point2D</a> &amp;<a class="el" href="classcmst_1_1_edge2_d.html#af02d43d8344759ac3709d318e26cdcee">end</a>)</td></tr>
 <tr class="separator:a0d1166315f84757395e889d3225e2ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaa859c8f6b412e1174abe8d8b429ce9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adaa859c8f6b412e1174abe8d8b429ce9"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>length</b> () const </td></tr>
+<tr class="memitem:adaa859c8f6b412e1174abe8d8b429ce9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_edge2_d.html#adaa859c8f6b412e1174abe8d8b429ce9">length</a> () const </td></tr>
 <tr class="separator:adaa859c8f6b412e1174abe8d8b429ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad77218c63818fe92f43033ba1487ab89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad77218c63818fe92f43033ba1487ab89"></a>
-<a class="el" href="classcmst_1_1_point2_d.html">Point2D</a>&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> () const </td></tr>
+<tr class="memitem:ad77218c63818fe92f43033ba1487ab89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcmst_1_1_point2_d.html">Point2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_edge2_d.html#ad77218c63818fe92f43033ba1487ab89">start</a> () const </td></tr>
 <tr class="separator:ad77218c63818fe92f43033ba1487ab89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af02d43d8344759ac3709d318e26cdcee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af02d43d8344759ac3709d318e26cdcee"></a>
-<a class="el" href="classcmst_1_1_point2_d.html">Point2D</a>&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const </td></tr>
+<tr class="memitem:af02d43d8344759ac3709d318e26cdcee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcmst_1_1_point2_d.html">Point2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_edge2_d.html#af02d43d8344759ac3709d318e26cdcee">end</a> () const </td></tr>
 <tr class="separator:af02d43d8344759ac3709d318e26cdcee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58bd75e0a118f5192f5811cfacb6e7ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58bd75e0a118f5192f5811cfacb6e7ac"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="classcmst_1_1_edge2_d.html">Edge2D</a> &amp;right)</td></tr>
+<tr class="memitem:a58bd75e0a118f5192f5811cfacb6e7ac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_edge2_d.html#a58bd75e0a118f5192f5811cfacb6e7ac">operator&lt;</a> (const <a class="el" href="classcmst_1_1_edge2_d.html">Edge2D</a> &amp;right)</td></tr>
+<tr class="memdesc:a58bd75e0a118f5192f5811cfacb6e7ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares edges by length.  <a href="#a58bd75e0a118f5192f5811cfacb6e7ac">More...</a><br /></td></tr>
 <tr class="separator:a58bd75e0a118f5192f5811cfacb6e7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1609ff699d629d691bf054acd2deb187"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1609ff699d629d691bf054acd2deb187"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classcmst_1_1_edge2_d.html">Edge2D</a> &amp;right)</td></tr>
+<tr class="memitem:a1609ff699d629d691bf054acd2deb187"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_edge2_d.html#a1609ff699d629d691bf054acd2deb187">operator==</a> (const <a class="el" href="classcmst_1_1_edge2_d.html">Edge2D</a> &amp;right)</td></tr>
 <tr class="separator:a1609ff699d629d691bf054acd2deb187"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aeb88dc66750f6c7967de0918e906abf4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb88dc66750f6c7967de0918e906abf4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>swap_points</b> ()</td></tr>
+<tr class="memitem:aeb88dc66750f6c7967de0918e906abf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_edge2_d.html#aeb88dc66750f6c7967de0918e906abf4">swap_points</a> ()</td></tr>
+<tr class="memdesc:aeb88dc66750f6c7967de0918e906abf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the start and end point.  <a href="#aeb88dc66750f6c7967de0918e906abf4">More...</a><br /></td></tr>
 <tr class="separator:aeb88dc66750f6c7967de0918e906abf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a8c0ca77824a84a48c714aaec5da72ad7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcmst_1_1_point2_d.html">Point2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_edge2_d.html#a8c0ca77824a84a48c714aaec5da72ad7">m_start</a></td></tr>
+<tr class="memdesc:a8c0ca77824a84a48c714aaec5da72ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start point.  <a href="#a8c0ca77824a84a48c714aaec5da72ad7">More...</a><br /></td></tr>
+<tr class="separator:a8c0ca77824a84a48c714aaec5da72ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26aabda4fcc506ae340392e78f92e49b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcmst_1_1_point2_d.html">Point2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_edge2_d.html#a26aabda4fcc506ae340392e78f92e49b">m_end</a></td></tr>
+<tr class="memdesc:a26aabda4fcc506ae340392e78f92e49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">End point.  <a href="#a26aabda4fcc506ae340392e78f92e49b">More...</a><br /></td></tr>
+<tr class="separator:a26aabda4fcc506ae340392e78f92e49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab461fb636aa7f76af613c63c681c186e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_edge2_d.html#ab461fb636aa7f76af613c63c681c186e">m_length</a></td></tr>
+<tr class="memdesc:ab461fb636aa7f76af613c63c681c186e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length.  <a href="#ab461fb636aa7f76af613c63c681c186e">More...</a><br /></td></tr>
+<tr class="separator:ab461fb636aa7f76af613c63c681c186e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ae312c205375d240b1c8bc889f2c1c55e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae312c205375d240b1c8bc889f2c1c55e"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;out, const <a class="el" href="classcmst_1_1_edge2_d.html">Edge2D</a> &amp;e)</td></tr>
+<tr class="memitem:ae312c205375d240b1c8bc889f2c1c55e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmst_1_1_edge2_d.html#ae312c205375d240b1c8bc889f2c1c55e">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classcmst_1_1_edge2_d.html">Edge2D</a> &amp;e)</td></tr>
 <tr class="separator:ae312c205375d240b1c8bc889f2c1c55e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="_edge2_d_8h_source.html">Edge2D.h</a></li>
-</ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Stores edges in 2D plane.</p>
+<p>The start and end points are stored in the edge. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a0d1166315f84757395e889d3225e2ae0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cmst::Edge2D::Edge2D </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcmst_1_1_point2_d.html">Point2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcmst_1_1_point2_d.html">Point2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor</p>
+<p>Calculates the length. </p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcmst_1_1_edge2_d_a0d1166315f84757395e889d3225e2ae0_cgraph.png" border="0" usemap="#classcmst_1_1_edge2_d_a0d1166315f84757395e889d3225e2ae0_cgraph" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af02d43d8344759ac3709d318e26cdcee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcmst_1_1_point2_d.html">Point2D</a> cmst::Edge2D::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the end point.</p>
+<dl class="section return"><dt>Returns</dt><dd>end point </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adaa859c8f6b412e1174abe8d8b429ce9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double cmst::Edge2D::length </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the length of the edge.</p>
+<dl class="section return"><dt>Returns</dt><dd>length of the edge </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a58bd75e0a118f5192f5811cfacb6e7ac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cmst::Edge2D::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcmst_1_1_edge2_d.html">Edge2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>right</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compares edges by length. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1609ff699d629d691bf054acd2deb187"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cmst::Edge2D::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcmst_1_1_edge2_d.html">Edge2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>right</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compares <a class="el" href="classcmst_1_1_edge2_d.html">cmst::Edge2D</a> by start point and end point.</p>
+<p>Take the <a class="el" href="classcmst_1_1_edge2_d.html">cmst::Edge2D</a> as undirected. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad77218c63818fe92f43033ba1487ab89"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcmst_1_1_point2_d.html">Point2D</a> cmst::Edge2D::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the start point.</p>
+<dl class="section return"><dt>Returns</dt><dd>start point </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeb88dc66750f6c7967de0918e906abf4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cmst::Edge2D::swap_points </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the start and end point. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcmst_1_1_edge2_d_aeb88dc66750f6c7967de0918e906abf4_icgraph.png" border="0" usemap="#classcmst_1_1_edge2_d_aeb88dc66750f6c7967de0918e906abf4_icgraph" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="ae312c205375d240b1c8bc889f2c1c55e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcmst_1_1_edge2_d.html">Edge2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prints information about the edge.</p>
+<p>Prints the length, start point and end point. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a26aabda4fcc506ae340392e78f92e49b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcmst_1_1_point2_d.html">Point2D</a> cmst::Edge2D::m_end</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>End point. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab461fb636aa7f76af613c63c681c186e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double cmst::Edge2D::m_length</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Length. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8c0ca77824a84a48c714aaec5da72ad7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcmst_1_1_point2_d.html">Point2D</a> cmst::Edge2D::m_start</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start point. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>cmst</b></li><li class="navelem"><a class="el" href="classcmst_1_1_edge2_d.html">Edge2D</a></li>
-    <li class="footer">Generated on Mon May 30 2016 16:14:25 for computeMST by
+    <li class="navelem"><a class="el" href="namespacecmst.html">cmst</a></li><li class="navelem"><a class="el" href="classcmst_1_1_edge2_d.html">Edge2D</a></li>
+    <li class="footer">Generated on Mon Jun 6 2016 19:11:08 for computeMST by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

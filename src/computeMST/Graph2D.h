@@ -29,7 +29,9 @@ namespace cmst
 
         /// The Kruskal algorithm for finding the minimal spanning tree.
         /// \return The length of the MST.
-        double Kruskal(bool naive = false);
+        double Kruskal();
+
+        double Prim();
 
         void drawPoint();
 
@@ -38,6 +40,33 @@ namespace cmst
         // void drawVoronoi();
 
         void drawMST();
+
+        void changeSTDisplay(int direc)
+        {
+            if (m_ST.size() == 0) return;
+            else if (m_displaySTNum == -1)
+            {
+                m_displaySTNum = 0;
+                return;
+            }
+            if (direc < 0 && m_displaySTNum > 0)
+                m_displaySTNum--;
+            else if (direc > 0 && m_displaySTNum < m_ST.size()-1)
+                m_displaySTNum++;
+        }
+
+        void printSTInfo()
+        {
+            if (m_displaySTNum != -1)
+            {
+                std::cout << "\nCurrent MST(naive) displaying: " << m_displaySTNum << " th" << std::endl;
+                std::cout << "== Number of edges: " << m_ST[m_displaySTNum].m_edges.size() << std::endl;
+                std::cout << "== Length: " << m_ST[m_displaySTNum].m_length << std::endl;
+                // std::cout << "== Delaunay Triangulation Compute Time: " << m_curGraph->delaunayTime()/1000.0 << std::endl;
+                // std::cout << "== Graph construct time: " << m_curGraph->graphConstructTime()/1000.0 << std::endl;
+                // std::cout << "== MST Compute Time: " << m_curGraph->mstTime()/1000.0 << std::endl;
+            }
+        }
 
         double mstLength()
         {
@@ -61,6 +90,8 @@ namespace cmst
 
         int edgeNum() const { return m_delaunayEdge.size(); }
 
+        bool validateDone() const { return m_validateDone; }
+
 
     protected:
 
@@ -72,14 +103,29 @@ namespace cmst
 
         std::vector<Point2D> m_points;
         std::vector<IndexEdge2D> m_delaunayEdge;
+
         std::vector<IndexEdge2D> m_MSTEdge;
+
+        std::vector<IndexEdge2D> m_edges;
         std::vector<CGAL::Object> m_voronoiEdge;
         std::vector<std::vector<int>> m_graph;
         Delaunay m_delaunay;
 
+        struct ST
+        {
+            std::vector<IndexEdge2D> m_edges;
+            int m_stTime;
+            double m_length;
+
+            ST(std::vector<IndexEdge2D> edges = std::vector<IndexEdge2D>(), int stTime = 0, double length = 0.0) :
+                m_edges(edges), m_stTime(stTime), m_length(length) {}
+        };
+        std::vector<ST> m_ST;
+
     private:
 
         bool m_mstDone;
+        bool m_validateDone;
 
         double m_mstLength;
 
@@ -87,5 +133,7 @@ namespace cmst
         int m_mstTime;
         int m_graphConstructTime;
         int m_kMSTTime;
+
+        int m_displaySTNum;
     };
 }

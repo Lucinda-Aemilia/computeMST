@@ -94,7 +94,26 @@ void processSpecialKeys(int key, int x, int y)
             cmst::Window::instance()->printCurInfo();
         }
         break;
+    case GLUT_KEY_UP :
+        cmst::Window::instance()->changeMSTDisplay(1);
+        cmst::Window::instance()->printSTInfo();
+        break;
+    case GLUT_KEY_DOWN :
+        cmst::Window::instance()->changeMSTDisplay(-1);
+        cmst::Window::instance()->printSTInfo();
+        break;
     }
+}
+
+void initRendering()
+{
+    glEnable(GL_POINT_SMOOTH);
+    glEnable(GL_LINE_SMOOTH);
+    glHint(GL_POINT_SMOOTH_HINT, GL_NICEST); // Make round points, not square points
+    glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);  // Antialias the lines
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glClearColor( 0.9, 0.9, 0.9, 1 );
 }
 
 void createGLUTMenus()
@@ -121,6 +140,7 @@ void createGLUTMenus()
 	glutAddSubMenu("Generate", newMenu);
 	glutAddSubMenu("Show", showMenu);
 	glutAddSubMenu("Test", testMenu);
+	glutAddMenuEntry("Validate", cmst::Menu::VALIDATOR);
 	glutAddMenuEntry("Quit", cmst::Menu::QUIT);
 
 	// attach the menu to the right button
@@ -201,6 +221,10 @@ void processMainMenu(int option)
 {
 	switch (option)
 	{
+    case cmst::Menu::VALIDATOR :
+        cmst::Window::instance()->runValidate();
+        cmst::Window::instance()->printSTInfo();
+	    break;
     case cmst::Menu::QUIT :
         exit(0);
         break;

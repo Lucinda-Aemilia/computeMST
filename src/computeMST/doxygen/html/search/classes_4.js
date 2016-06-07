@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stat',['Stat',['../classcmst_1_1_stat.html',1,'cmst']]]
+  ['point2d',['Point2D',['../classcmst_1_1_point2_d.html',1,'cmst']]]
 ];

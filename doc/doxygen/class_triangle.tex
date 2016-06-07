@@ -1,0 +1,115 @@
+\hypertarget{class_triangle}{}\section{Triangle Class Reference}
+\label{class_triangle}\index{Triangle@{Triangle}}
+
+
+{\ttfamily \#include $<$triangle.h$>$}
+
+
+
+Collaboration diagram for Triangle:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_triangle_ac91f2225feea061bdc8b90b5ad05ab42}{Triangle} (const \hyperlink{class_vec2f}{Vec2f} \&\_p1, const \hyperlink{class_vec2f}{Vec2f} \&\_p2, const \hyperlink{class_vec2f}{Vec2f} \&\_p3)
+\item 
+bool \hyperlink{class_triangle_a8b279a0dff36453b04b359dc1c3dfb50}{containsVertex} (const \hyperlink{class_vec2f}{Vec2f} \&v)
+\item 
+bool \hyperlink{class_triangle_a7a46dcbaa3532abb09c561ae79a3cc77}{circumCircleContains} (const \hyperlink{class_vec2f}{Vec2f} \&v)
+\item 
+bool \hyperlink{class_triangle_a12315ef4973d7f56ca51760330391e05}{operator==} (const \hyperlink{class_triangle}{Triangle} \&t2) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vec2f}{Vec2f} \hyperlink{class_triangle_af2ff757f1bff3177e1a0e8c19664edbc}{p1}
+\item 
+\hyperlink{class_vec2f}{Vec2f} \hyperlink{class_triangle_a6a7d000238fb26c47181de1e7a502037}{p2}
+\item 
+\hyperlink{class_vec2f}{Vec2f} \hyperlink{class_triangle_a43b6750934c84aff2f34b38d2f26d012}{p3}
+\item 
+\hyperlink{class_edge}{Edge} \hyperlink{class_triangle_ab91aa48d8a4c25deecd1a35433a38260}{e1}
+\item 
+\hyperlink{class_edge}{Edge} \hyperlink{class_triangle_a5ad4339f6fb03adb4f6ee840ace34d82}{e2}
+\item 
+\hyperlink{class_edge}{Edge} \hyperlink{class_triangle_aa55fc8f8662cba36b227858760bb173c}{e3}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std::ostream \& \hyperlink{class_triangle_a865c96e9af49664ea93f369217f1f4f4}{operator$<$$<$} (std::ostream \&str, const \hyperlink{class_triangle}{Triangle} \&t)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\subsubsection[{\texorpdfstring{Triangle(const Vec2f \&\_p1, const Vec2f \&\_p2, const Vec2f \&\_p3)}{Triangle(const Vec2f &_p1, const Vec2f &_p2, const Vec2f &_p3)}}]{\setlength{\rightskip}{0pt plus 5cm}Triangle::Triangle (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vec2f} \&}]{\_p1, }
+\item[{const {\bf Vec2f} \&}]{\_p2, }
+\item[{const {\bf Vec2f} \&}]{\_p3}
+\end{DoxyParamCaption}
+)}\hypertarget{class_triangle_ac91f2225feea061bdc8b90b5ad05ab42}{}\label{class_triangle_ac91f2225feea061bdc8b90b5ad05ab42}
+
+
+\subsection{Member Function Documentation}
+\index{Triangle@{Triangle}!circumCircleContains@{circumCircleContains}}
+\index{circumCircleContains@{circumCircleContains}!Triangle@{Triangle}}
+\subsubsection[{\texorpdfstring{circumCircleContains(const Vec2f \&v)}{circumCircleContains(const Vec2f &v)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Triangle::circumCircleContains (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vec2f} \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{class_triangle_a7a46dcbaa3532abb09c561ae79a3cc77}{}\label{class_triangle_a7a46dcbaa3532abb09c561ae79a3cc77}
+\index{Triangle@{Triangle}!containsVertex@{containsVertex}}
+\index{containsVertex@{containsVertex}!Triangle@{Triangle}}
+\subsubsection[{\texorpdfstring{containsVertex(const Vec2f \&v)}{containsVertex(const Vec2f &v)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Triangle::containsVertex (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vec2f} \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{class_triangle_a8b279a0dff36453b04b359dc1c3dfb50}{}\label{class_triangle_a8b279a0dff36453b04b359dc1c3dfb50}
+
+
+Here is the caller graph for this function:
+% FIG 1
+
+
+\index{Triangle@{Triangle}!operator==@{operator==}}
+\index{operator==@{operator==}!Triangle@{Triangle}}
+\subsubsection[{\texorpdfstring{operator==(const Triangle \&t2) const }{operator==(const Triangle &t2) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Triangle::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Triangle} \&}]{t2}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_triangle_a12315ef4973d7f56ca51760330391e05}{}\label{class_triangle_a12315ef4973d7f56ca51760330391e05}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Triangle@{Triangle}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Triangle@{Triangle}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}std::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std::ostream \&}]{str, }
+\item[{const {\bf Triangle} \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_triangle_a865c96e9af49664ea93f369217f1f4f4}{}\label{class_triangle_a865c96e9af49664ea93f369217f1f4f4}
+This has to be a friend. 
+
+\subsection{Member Data Documentation}
+\index{Triangle@{Triangle}!e1@{e1}}
+\index{e1@{e1}!Triangle@{Triangle}}
+\subsubsection[{\texorpdfstring{e1}{e1}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Edge} Triangle::e1}\hypertarget{class_triangle_ab91aa48d8a4c25deecd1a35433a38260}{}\label{class_triangle_ab91aa48d8a4c25deecd1a35433a38260}
+\index{Triangle@{Triangle}!e2@{e2}}
+\index{e2@{e2}!Triangle@{Triangle}}
+\subsubsection[{\texorpdfstring{e2}{e2}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Edge} Triangle::e2}\hypertarget{class_triangle_a5ad4339f6fb03adb4f6ee840ace34d82}{}\label{class_triangle_a5ad4339f6fb03adb4f6ee840ace34d82}
+\index{Triangle@{Triangle}!e3@{e3}}
+\index{e3@{e3}!Triangle@{Triangle}}
+\subsubsection[{\texorpdfstring{e3}{e3}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Edge} Triangle::e3}\hypertarget{class_triangle_aa55fc8f8662cba36b227858760bb173c}{}\label{class_triangle_aa55fc8f8662cba36b227858760bb173c}
+\index{Triangle@{Triangle}!p1@{p1}}
+\index{p1@{p1}!Triangle@{Triangle}}
+\subsubsection[{\texorpdfstring{p1}{p1}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec2f} Triangle::p1}\hypertarget{class_triangle_af2ff757f1bff3177e1a0e8c19664edbc}{}\label{class_triangle_af2ff757f1bff3177e1a0e8c19664edbc}
+\index{Triangle@{Triangle}!p2@{p2}}
+\index{p2@{p2}!Triangle@{Triangle}}
+\subsubsection[{\texorpdfstring{p2}{p2}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec2f} Triangle::p2}\hypertarget{class_triangle_a6a7d000238fb26c47181de1e7a502037}{}\label{class_triangle_a6a7d000238fb26c47181de1e7a502037}
+\index{Triangle@{Triangle}!p3@{p3}}
+\index{p3@{p3}!Triangle@{Triangle}}
+\subsubsection[{\texorpdfstring{p3}{p3}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec2f} Triangle::p3}\hypertarget{class_triangle_a43b6750934c84aff2f34b38d2f26d012}{}\label{class_triangle_a43b6750934c84aff2f34b38d2f26d012}

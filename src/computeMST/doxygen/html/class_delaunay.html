@@ -46,8 +46,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -70,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -105,35 +106,158 @@ $(document).ready(function(){initNavTree('class_delaunay.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_delaunay-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Delaunay Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;delaunay.h&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Delaunay:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_delaunay__coll__graph.png" border="0" usemap="#_delaunay_coll__map" alt="Collaboration graph"/></div>
+<map name="_delaunay_coll__map" id="_delaunay_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a97f07ff9e702dd4592fe353805a9f82c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97f07ff9e702dd4592fe353805a9f82c"></a>
-std::vector&lt; <a class="el" href="class_triangle.html">Triangle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>triangulate</b> (std::vector&lt; <a class="el" href="class_vector2.html">Vec2f</a> &gt; &amp;vertices)</td></tr>
+<tr class="memitem:a97f07ff9e702dd4592fe353805a9f82c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_triangle.html">Triangle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_delaunay.html#a97f07ff9e702dd4592fe353805a9f82c">triangulate</a> (std::vector&lt; <a class="el" href="class_vec2f.html">Vec2f</a> &gt; &amp;vertices)</td></tr>
 <tr class="separator:a97f07ff9e702dd4592fe353805a9f82c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15d2799c1fa1b237e4f0afad610517c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15d2799c1fa1b237e4f0afad610517c2"></a>
-std::vector&lt; <a class="el" href="class_triangle.html">Triangle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getTriangles</b> ()</td></tr>
+<tr class="memitem:a15d2799c1fa1b237e4f0afad610517c2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_triangle.html">Triangle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_delaunay.html#a15d2799c1fa1b237e4f0afad610517c2">getTriangles</a> ()</td></tr>
 <tr class="separator:a15d2799c1fa1b237e4f0afad610517c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ca53e3d46f367fc879de1905d8bbf3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ca53e3d46f367fc879de1905d8bbf3b"></a>
-std::vector&lt; <a class="el" href="class_edge.html">Edge</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getEdges</b> ()</td></tr>
+<tr class="memitem:a8ca53e3d46f367fc879de1905d8bbf3b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_edge.html">Edge</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_delaunay.html#a8ca53e3d46f367fc879de1905d8bbf3b">getEdges</a> ()</td></tr>
 <tr class="separator:a8ca53e3d46f367fc879de1905d8bbf3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7f57c36e1eed644efe9e469c5212a826"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_triangle.html">Triangle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_delaunay.html#a7f57c36e1eed644efe9e469c5212a826">_triangles</a></td></tr>
+<tr class="separator:a7f57c36e1eed644efe9e469c5212a826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e53063d9dd4df3936c14165e64e482f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_edge.html">Edge</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_delaunay.html#a6e53063d9dd4df3936c14165e64e482f">_edges</a></td></tr>
+<tr class="separator:a6e53063d9dd4df3936c14165e64e482f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="delaunay_8h_source.html">delaunay.h</a></li>
-<li>delaunay.cpp</li>
-</ul>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a8ca53e3d46f367fc879de1905d8bbf3b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_edge.html">Edge</a>&gt; Delaunay::getEdges </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a15d2799c1fa1b237e4f0afad610517c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_triangle.html">Triangle</a>&gt; Delaunay::getTriangles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a97f07ff9e702dd4592fe353805a9f82c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_triangle.html">Triangle</a> &gt; Delaunay::triangulate </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_vec2f.html">Vec2f</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_delaunay_a97f07ff9e702dd4592fe353805a9f82c_cgraph.png" border="0" usemap="#class_delaunay_a97f07ff9e702dd4592fe353805a9f82c_cgraph" alt=""/></div>
+<map name="class_delaunay_a97f07ff9e702dd4592fe353805a9f82c_cgraph" id="class_delaunay_a97f07ff9e702dd4592fe353805a9f82c_cgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a6e53063d9dd4df3936c14165e64e482f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_edge.html">Edge</a>&gt; Delaunay::_edges</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7f57c36e1eed644efe9e469c5212a826"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_triangle.html">Triangle</a>&gt; Delaunay::_triangles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_delaunay.html">Delaunay</a></li>
-    <li class="footer">Generated on Mon May 23 2016 16:46:44 for computeMST by
+    <li class="footer">Generated on Mon Jun 6 2016 19:11:07 for computeMST by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

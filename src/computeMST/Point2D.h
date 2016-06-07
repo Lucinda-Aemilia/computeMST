@@ -14,13 +14,13 @@ namespace cmst
         double x() const { return m_x; }
         double y() const { return m_y; }
 
-        bool operator < (const Point2D& right)
+        bool operator < (const Point2D& right) const
         {
             if (m_x != right.m_x) return m_x < right.m_x;
             return m_y < right.m_y;
         }
 
-        bool operator == (const Point2D& right)
+        bool operator == (const Point2D& right) const
         {
             return abs(m_x - right.m_x) <= EPS_MIN && abs(m_y - right.m_y) <= EPS_MIN;
         }

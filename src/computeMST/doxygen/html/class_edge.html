@@ -46,8 +46,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -70,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -106,40 +107,193 @@ $(document).ready(function(){initNavTree('class_edge.html','');});
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="class_edge-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Edge Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;edge.h&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Edge:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_edge__coll__graph.png" border="0" usemap="#_edge_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 0 -->
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a46424efbe9a3753f10ed69734968b42a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46424efbe9a3753f10ed69734968b42a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Edge</b> (const <a class="el" href="class_vector2.html">Vec2f</a> &amp;p1, const <a class="el" href="class_vector2.html">Vec2f</a> &amp;p2)</td></tr>
+<tr class="memitem:a46424efbe9a3753f10ed69734968b42a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edge.html#a46424efbe9a3753f10ed69734968b42a">Edge</a> (const <a class="el" href="class_vec2f.html">Vec2f</a> &amp;<a class="el" href="class_edge.html#a52f5f3c82f0241458a80008649cf2669">p1</a>, const <a class="el" href="class_vec2f.html">Vec2f</a> &amp;<a class="el" href="class_edge.html#a1f8d9abda73daf83db1780825ae0be0c">p2</a>)</td></tr>
 <tr class="separator:a46424efbe9a3753f10ed69734968b42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70ed9f4d5f93c9cc5273a34361781532"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70ed9f4d5f93c9cc5273a34361781532"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Edge</b> (const <a class="el" href="class_edge.html">Edge</a> &amp;e)</td></tr>
+<tr class="memitem:a70ed9f4d5f93c9cc5273a34361781532"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edge.html#a70ed9f4d5f93c9cc5273a34361781532">Edge</a> (const <a class="el" href="class_edge.html">Edge</a> &amp;e)</td></tr>
 <tr class="separator:a70ed9f4d5f93c9cc5273a34361781532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23eeba05e956cd2a398280537f0c518f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edge.html#a23eeba05e956cd2a398280537f0c518f">operator==</a> (const <a class="el" href="class_edge.html">Edge</a> &amp;e2) const </td></tr>
+<tr class="separator:a23eeba05e956cd2a398280537f0c518f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a52f5f3c82f0241458a80008649cf2669"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52f5f3c82f0241458a80008649cf2669"></a>
-<a class="el" href="class_vector2.html">Vec2f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>p1</b></td></tr>
+<tr class="memitem:a52f5f3c82f0241458a80008649cf2669"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec2f.html">Vec2f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edge.html#a52f5f3c82f0241458a80008649cf2669">p1</a></td></tr>
 <tr class="separator:a52f5f3c82f0241458a80008649cf2669"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f8d9abda73daf83db1780825ae0be0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f8d9abda73daf83db1780825ae0be0c"></a>
-<a class="el" href="class_vector2.html">Vec2f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>p2</b></td></tr>
+<tr class="memitem:a1f8d9abda73daf83db1780825ae0be0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec2f.html">Vec2f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edge.html#a1f8d9abda73daf83db1780825ae0be0c">p2</a></td></tr>
 <tr class="separator:a1f8d9abda73daf83db1780825ae0be0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a05e7e89dad7ec4c7ea81da0b1f487a78"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edge.html#a05e7e89dad7ec4c7ea81da0b1f487a78">operator&lt;&lt;</a> (std::ostream &amp;str, const <a class="el" href="class_edge.html">Edge</a> &amp;e)</td></tr>
+<tr class="separator:a05e7e89dad7ec4c7ea81da0b1f487a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="edge_8h_source.html">edge.h</a></li>
-</ul>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a46424efbe9a3753f10ed69734968b42a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Edge::Edge </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vec2f.html">Vec2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_vec2f.html">Vec2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a70ed9f4d5f93c9cc5273a34361781532"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Edge::Edge </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_edge.html">Edge</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a23eeba05e956cd2a398280537f0c518f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Edge::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_edge.html">Edge</a> &amp;&#160;</td>
+          <td class="paramname"><em>e2</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="a05e7e89dad7ec4c7ea81da0b1f487a78"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_edge.html">Edge</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a52f5f3c82f0241458a80008649cf2669"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vec2f.html">Vec2f</a> Edge::p1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1f8d9abda73daf83db1780825ae0be0c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vec2f.html">Vec2f</a> Edge::p2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_edge.html">Edge</a></li>
-    <li class="footer">Generated on Mon May 23 2016 16:46:44 for computeMST by
+    <li class="footer">Generated on Mon Jun 6 2016 19:11:07 for computeMST by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

@@ -1,0 +1,6 @@
+digraph "cmst::Graph2D"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{cmst::Graph2D\n|# father\l# m_points\l# m_delaunayEdge\l# m_MSTEdge\l# m_voronoiEdge\l# m_graph\l# m_delaunay\l- m_mstDone\l- m_mstLength\l- m_delaunayTime\l- m_mstTime\l- m_graphConstructTime\l- m_kMSTTime\l|+ Graph2D()\l+ Kruskal()\l+ drawPoint()\l+ drawDelaunay()\l+ drawMST()\l+ mstLength()\l+ delaunayTime()\l+ mstTime()\l+ graphConstructTime()\l+ pointNum()\l+ edgeNum()\l# findFather()\l# initFather()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

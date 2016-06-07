@@ -1,0 +1,6 @@
+digraph "Vec2f"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Vec2f\n|+ x\l+ y\l|+ Vec2f()\l+ Vec2f()\l+ Vec2f()\l+ set()\l+ dist2()\l+ dist()\l+ operator==()\l+ operator\<()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

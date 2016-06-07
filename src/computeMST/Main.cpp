@@ -52,16 +52,7 @@ int main(int argc, char** argv)
     glutCreateWindow ( "Compute MST" );
 
     createGLUTMenus();
-
-    // These should be put in initRendering()
-    glEnable(GL_POINT_SMOOTH);
-    glEnable(GL_LINE_SMOOTH);
-    glHint(GL_POINT_SMOOTH_HINT, GL_NICEST); // Make round points, not square points
-    glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);  // Antialias the lines
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
-    glClearColor( 0.9, 0.9, 0.9, 1 );
+    initRendering();
 
     glutDisplayFunc(display);
     glutKeyboardFunc(processNormalKeys);

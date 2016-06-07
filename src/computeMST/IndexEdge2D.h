@@ -9,6 +9,8 @@ namespace cmst
 
     public:
 
+        IndexEdge2D() {}
+
         IndexEdge2D(Point2D p1, Point2D p2, int index1, int index2) : Edge2D(p1, p2)
         {
             if (index1 > index2)
@@ -23,6 +25,18 @@ namespace cmst
         int startIndex() const { return m_index[0]; }
 
         int endIndex() const { return m_index[1]; }
+
+        /// Compares edges by length.
+        bool operator < (const IndexEdge2D& right) const
+        {
+            return length() < right.length();
+        }
+
+        /// Compares edges by length.
+        bool operator > (const IndexEdge2D& right) const
+        {
+            return length() > right.length();
+        }
 
         friend std::ostream &operator << (std::ostream &str, const IndexEdge2D& e)
         {

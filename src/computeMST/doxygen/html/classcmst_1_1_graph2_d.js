@@ -16,8 +16,14 @@ var classcmst_1_1_graph2_d =
     [ "father", "classcmst_1_1_graph2_d.html#ad5d251f2f6f8b827af4404985fcec53c", null ],
     [ "m_delaunay", "classcmst_1_1_graph2_d.html#af19557df59901e6078c2038652c95623", null ],
     [ "m_delaunayEdge", "classcmst_1_1_graph2_d.html#a6fe64b2078ec3c700a8a2e2bd77e2dae", null ],
+    [ "m_delaunayTime", "classcmst_1_1_graph2_d.html#a869a2fef63a6dbc8733056afd9ad0b71", null ],
     [ "m_graph", "classcmst_1_1_graph2_d.html#a5df9c78edb4f5c68da11b01e44061dc5", null ],
+    [ "m_graphConstructTime", "classcmst_1_1_graph2_d.html#ac594da90a2c9bd7332644532969ef11f", null ],
+    [ "m_kMSTTime", "classcmst_1_1_graph2_d.html#a647ad467e7c301503a9ed46fd0eab494", null ],
+    [ "m_mstDone", "classcmst_1_1_graph2_d.html#ab7c087fe87b5750195100ff25f10f628", null ],
     [ "m_MSTEdge", "classcmst_1_1_graph2_d.html#a1cc96b5251162964ac21f46955ac8271", null ],
+    [ "m_mstLength", "classcmst_1_1_graph2_d.html#a722498b25b96d26e68e378ba970d5e65", null ],
+    [ "m_mstTime", "classcmst_1_1_graph2_d.html#a447f3d36666c57d2f15bddc1e3126f1e", null ],
     [ "m_points", "classcmst_1_1_graph2_d.html#a32456f3c630e34a56ce3109183142c10", null ],
     [ "m_voronoiEdge", "classcmst_1_1_graph2_d.html#a05e5ea6746bfd9d0ccd47308f4bbf1af", null ]
 ];

@@ -46,8 +46,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -70,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -106,56 +107,266 @@ $(document).ready(function(){initNavTree('class_triangle.html','');});
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="class_triangle-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Triangle Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;triangle.h&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Triangle:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_triangle__coll__graph.png" border="0" usemap="#_triangle_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 0 -->
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac91f2225feea061bdc8b90b5ad05ab42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac91f2225feea061bdc8b90b5ad05ab42"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Triangle</b> (const <a class="el" href="class_vector2.html">Vec2f</a> &amp;_p1, const <a class="el" href="class_vector2.html">Vec2f</a> &amp;_p2, const <a class="el" href="class_vector2.html">Vec2f</a> &amp;_p3)</td></tr>
+<tr class="memitem:ac91f2225feea061bdc8b90b5ad05ab42"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triangle.html#ac91f2225feea061bdc8b90b5ad05ab42">Triangle</a> (const <a class="el" href="class_vec2f.html">Vec2f</a> &amp;_p1, const <a class="el" href="class_vec2f.html">Vec2f</a> &amp;_p2, const <a class="el" href="class_vec2f.html">Vec2f</a> &amp;_p3)</td></tr>
 <tr class="separator:ac91f2225feea061bdc8b90b5ad05ab42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b279a0dff36453b04b359dc1c3dfb50"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b279a0dff36453b04b359dc1c3dfb50"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>containsVertex</b> (const <a class="el" href="class_vector2.html">Vec2f</a> &amp;v)</td></tr>
+<tr class="memitem:a8b279a0dff36453b04b359dc1c3dfb50"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triangle.html#a8b279a0dff36453b04b359dc1c3dfb50">containsVertex</a> (const <a class="el" href="class_vec2f.html">Vec2f</a> &amp;v)</td></tr>
 <tr class="separator:a8b279a0dff36453b04b359dc1c3dfb50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a46dcbaa3532abb09c561ae79a3cc77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a46dcbaa3532abb09c561ae79a3cc77"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>circumCircleContains</b> (const <a class="el" href="class_vector2.html">Vec2f</a> &amp;v)</td></tr>
+<tr class="memitem:a7a46dcbaa3532abb09c561ae79a3cc77"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triangle.html#a7a46dcbaa3532abb09c561ae79a3cc77">circumCircleContains</a> (const <a class="el" href="class_vec2f.html">Vec2f</a> &amp;v)</td></tr>
 <tr class="separator:a7a46dcbaa3532abb09c561ae79a3cc77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12315ef4973d7f56ca51760330391e05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triangle.html#a12315ef4973d7f56ca51760330391e05">operator==</a> (const <a class="el" href="class_triangle.html">Triangle</a> &amp;t2) const </td></tr>
+<tr class="separator:a12315ef4973d7f56ca51760330391e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:af2ff757f1bff3177e1a0e8c19664edbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2ff757f1bff3177e1a0e8c19664edbc"></a>
-<a class="el" href="class_vector2.html">Vec2f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>p1</b></td></tr>
+<tr class="memitem:af2ff757f1bff3177e1a0e8c19664edbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec2f.html">Vec2f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triangle.html#af2ff757f1bff3177e1a0e8c19664edbc">p1</a></td></tr>
 <tr class="separator:af2ff757f1bff3177e1a0e8c19664edbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a7d000238fb26c47181de1e7a502037"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a7d000238fb26c47181de1e7a502037"></a>
-<a class="el" href="class_vector2.html">Vec2f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>p2</b></td></tr>
+<tr class="memitem:a6a7d000238fb26c47181de1e7a502037"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec2f.html">Vec2f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triangle.html#a6a7d000238fb26c47181de1e7a502037">p2</a></td></tr>
 <tr class="separator:a6a7d000238fb26c47181de1e7a502037"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43b6750934c84aff2f34b38d2f26d012"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43b6750934c84aff2f34b38d2f26d012"></a>
-<a class="el" href="class_vector2.html">Vec2f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>p3</b></td></tr>
+<tr class="memitem:a43b6750934c84aff2f34b38d2f26d012"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec2f.html">Vec2f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triangle.html#a43b6750934c84aff2f34b38d2f26d012">p3</a></td></tr>
 <tr class="separator:a43b6750934c84aff2f34b38d2f26d012"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab91aa48d8a4c25deecd1a35433a38260"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab91aa48d8a4c25deecd1a35433a38260"></a>
-<a class="el" href="class_edge.html">Edge</a>&#160;</td><td class="memItemRight" valign="bottom"><b>e1</b></td></tr>
+<tr class="memitem:ab91aa48d8a4c25deecd1a35433a38260"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_edge.html">Edge</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triangle.html#ab91aa48d8a4c25deecd1a35433a38260">e1</a></td></tr>
 <tr class="separator:ab91aa48d8a4c25deecd1a35433a38260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ad4339f6fb03adb4f6ee840ace34d82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ad4339f6fb03adb4f6ee840ace34d82"></a>
-<a class="el" href="class_edge.html">Edge</a>&#160;</td><td class="memItemRight" valign="bottom"><b>e2</b></td></tr>
+<tr class="memitem:a5ad4339f6fb03adb4f6ee840ace34d82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_edge.html">Edge</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triangle.html#a5ad4339f6fb03adb4f6ee840ace34d82">e2</a></td></tr>
 <tr class="separator:a5ad4339f6fb03adb4f6ee840ace34d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa55fc8f8662cba36b227858760bb173c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa55fc8f8662cba36b227858760bb173c"></a>
-<a class="el" href="class_edge.html">Edge</a>&#160;</td><td class="memItemRight" valign="bottom"><b>e3</b></td></tr>
+<tr class="memitem:aa55fc8f8662cba36b227858760bb173c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_edge.html">Edge</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triangle.html#aa55fc8f8662cba36b227858760bb173c">e3</a></td></tr>
 <tr class="separator:aa55fc8f8662cba36b227858760bb173c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a865c96e9af49664ea93f369217f1f4f4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triangle.html#a865c96e9af49664ea93f369217f1f4f4">operator&lt;&lt;</a> (std::ostream &amp;str, const <a class="el" href="class_triangle.html">Triangle</a> &amp;t)</td></tr>
+<tr class="separator:a865c96e9af49664ea93f369217f1f4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="triangle_8h_source.html">triangle.h</a></li>
-<li>triangle.cpp</li>
-</ul>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ac91f2225feea061bdc8b90b5ad05ab42"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Triangle::Triangle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vec2f.html">Vec2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>_p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_vec2f.html">Vec2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>_p2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_vec2f.html">Vec2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>_p3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a7a46dcbaa3532abb09c561ae79a3cc77"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Triangle::circumCircleContains </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vec2f.html">Vec2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8b279a0dff36453b04b359dc1c3dfb50"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Triangle::containsVertex </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vec2f.html">Vec2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_triangle_a8b279a0dff36453b04b359dc1c3dfb50_icgraph.png" border="0" usemap="#class_triangle_a8b279a0dff36453b04b359dc1c3dfb50_icgraph" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a12315ef4973d7f56ca51760330391e05"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Triangle::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_triangle.html">Triangle</a> &amp;&#160;</td>
+          <td class="paramname"><em>t2</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="a865c96e9af49664ea93f369217f1f4f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_triangle.html">Triangle</a> &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This has to be a friend. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ab91aa48d8a4c25deecd1a35433a38260"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_edge.html">Edge</a> Triangle::e1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5ad4339f6fb03adb4f6ee840ace34d82"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_edge.html">Edge</a> Triangle::e2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa55fc8f8662cba36b227858760bb173c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_edge.html">Edge</a> Triangle::e3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af2ff757f1bff3177e1a0e8c19664edbc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vec2f.html">Vec2f</a> Triangle::p1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6a7d000238fb26c47181de1e7a502037"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vec2f.html">Vec2f</a> Triangle::p2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a43b6750934c84aff2f34b38d2f26d012"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vec2f.html">Vec2f</a> Triangle::p3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_triangle.html">Triangle</a></li>
-    <li class="footer">Generated on Mon May 23 2016 16:46:44 for computeMST by
+    <li class="footer">Generated on Mon Jun 6 2016 19:11:07 for computeMST by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

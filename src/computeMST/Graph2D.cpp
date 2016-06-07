@@ -1,7 +1,11 @@
 #include "Graph2D.h"
 #include <GL/glut.h>
+#include <queue>
+#include <algorithm>
+#include <cstring>
 
-cmst::Graph2D::Graph2D(std::vector<cmst::Point2D>& points) : m_points(points), m_mstDone(false)
+cmst::Graph2D::Graph2D(std::vector<cmst::Point2D>& points) : m_points(points),
+    m_mstDone(false), m_validateDone(false), m_displaySTNum(-1)
 {
     int n = m_points.size();
     m_graph.assign(n, std::vector<int>());
@@ -66,7 +70,7 @@ cmst::Graph2D::Graph2D(std::vector<cmst::Point2D>& points) : m_points(points), m
     }
 }
 
-double cmst::Graph2D::Kruskal(bool naive /* = false*/)
+double cmst::Graph2D::Kruskal()
 {
     m_MSTEdge.clear();
     std::sort(m_delaunayEdge.begin(), m_delaunayEdge.end());
@@ -74,24 +78,113 @@ double cmst::Graph2D::Kruskal(bool naive /* = false*/)
 
     double mstLength = 0.0f;
 
-    if (!naive)
+
+    int m = m_delaunayEdge.size();
+    for (int i = 0; i < m; i++)
     {
-        int m = m_delaunayEdge.size();
-        for (int i = 0; i < m; i++)
+        int fa1 = cmst::Graph2D::findFather(m_delaunayEdge[i].startIndex());
+        int fa2 = cmst::Graph2D::findFather(m_delaunayEdge[i].endIndex());
+        if (fa1 != fa2)
         {
-            int fa1 = cmst::Graph2D::findFather(m_delaunayEdge[i].startIndex());
-            int fa2 = cmst::Graph2D::findFather(m_delaunayEdge[i].endIndex());
-            if (fa1 != fa2)
-            {
-                father[fa1] = fa2;
-                m_MSTEdge.push_back(m_delaunayEdge[i]);
-                mstLength += m_delaunayEdge[i].length();
-            }
+            father[fa1] = fa2;
+            m_MSTEdge.push_back(m_delaunayEdge[i]);
+            mstLength += m_delaunayEdge[i].length();
         }
     }
 
+
     m_mstLength = mstLength;
     m_mstDone = true;
+
+    return mstLength;
+}
+
+double cmst::Graph2D::Prim()
+{
+    int n = m_points.size();
+    std::vector<cmst::IndexEdge2D> edges;
+
+    // Construct all edges
+    if (m_edges.empty())
+    {
+        m_edges.reserve(n * (n-1) / 2);
+        for (int i = 0; i < n; i++)
+            for (int j = i + 1; j < n; j++)
+                m_edges.push_back( IndexEdge2D(m_points[i], m_points[j], i, j) );
+        std::sort(m_edges.begin(), m_edges.end());
+    }
+
+    double mstLength = 0.0f;
+
+    // std::priority_queue<cmst::IndexEdge2D, std::vector<cmst::IndexEdge2D>, std::less<cmst::IndexEdge2D>> q;
+    std::vector<cmst::IndexEdge2D> heap;
+
+
+    int curNode = 0;
+    bool visit[n];
+    memset(visit, 0, sizeof(visit));
+    visit[0] = true;
+    for (int i = 1; i < n; i++)
+    {
+        // Update
+        for (int j = 0; j < n; j++)
+        {
+            if (!visit[j])
+            {
+                //q.push(cmst::IndexEdge2D(m_points[curNode], m_points[j], curNode, j));
+                heap.push_back(cmst::IndexEdge2D(m_points[curNode], m_points[j], curNode, j));
+                std::push_heap(heap.begin(), heap.end(), std::less<cmst::IndexEdge2D>());
+            }
+        }
+
+        // Clean
+
+        /*std::sort_heap(heap.begin(), heap.end(), std::less<cmst::IndexEdge2D>());
+        for (int i = 0; i < heap.size(); i++)
+            std::cout << heap[i].length() << ' ' << heap[i].startIndex() << ' ' << heap[i].endIndex() << std::endl;
+
+
+        heap.erase( std::unique(heap.begin(), heap.end(), std::less<cmst::IndexEdge2D>()), heap.end() );
+        if (heap.size() > n)
+            heap.erase(heap.end() - n, heap.end());
+        std::make_heap(heap.begin(), heap.end(), std::less<cmst::IndexEdge2D>());*/
+
+
+        /*
+        while (!q.empty() && visit[q.top().endIndex()] && visit[q.top().startIndex()])
+            q.pop();
+        if (q.empty())
+            break;
+        cmst::IndexEdge2D e(q.top());
+        q.pop();
+        */
+
+        cmst::IndexEdge2D e;
+        if (heap.empty())
+            break;
+        while (!heap.empty())
+        {
+            std::pop_heap(heap.begin(), heap.end(), std::less<cmst::IndexEdge2D>());
+            e = heap.back();
+            heap.pop_back();
+            if (!visit[e.startIndex()] || !visit[e.endIndex()])
+                break;
+        }
+
+
+        std::cout << "min length: " << e.length() << std::endl;
+        std::cout << std::endl;
+
+        mstLength += e.length();
+        edges.push_back(e);
+        curNode = visit[e.endIndex()] ? e.startIndex() : e.endIndex();
+        visit[curNode] = true;
+    }
+
+    m_ST.push_back(ST(edges, 0, mstLength));
+    m_validateDone = true;
+    if (m_displaySTNum == -1)
+        m_displaySTNum = m_ST.size() - 1;
 
     return mstLength;
 }
@@ -138,6 +231,7 @@ void cmst::Graph2D::drawDelaunay()
 
 void cmst::Graph2D::drawMST()
 {
+    // Draw the Delaunay MST
     glColor3f( 245/255.0, 92/255.0, 229/255.0 );
     // glColor3f(1, 1, 0);
     glLineWidth(3);
@@ -148,6 +242,24 @@ void cmst::Graph2D::drawMST()
         glVertex2f(m_MSTEdge[i].end().x(), m_MSTEdge[i].end().y());
     }
     glEnd();
+
+    // Draw the test MST
+    if (m_ST.size() > 0)
+    {
+        glEnable( GL_LINE_STIPPLE );
+        glLineWidth(1);
+        glLineStipple(1, 0x3333);
+        glColor3f(52/255.0, 197/255.0, 18/255.0);
+        glBegin(GL_LINES);
+        for (int i = 0; i < m_ST[m_displaySTNum].m_edges.size(); i++)
+        {
+            cmst::IndexEdge2D& e = m_ST[m_displaySTNum].m_edges[i];
+            glVertex2f(e.start().x(), e.start().y());
+            glVertex2f(e.end().x(), e.end().y());
+        }
+        glEnd();
+        glDisable( GL_LINE_STIPPLE );
+    }
 }
 
 /*

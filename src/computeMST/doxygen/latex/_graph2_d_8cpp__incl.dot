@@ -1,0 +1,48 @@
+digraph "Graph2D.cpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Graph2D.cpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Graph2D.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_graph2_d_8h.html"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="algorithm",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="CGAL/Exact_predicates\l_inexact_constructions\l_kernel.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="CGAL/Triangulation\l_euclidean_traits_xy_3.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="CGAL/Delaunay_triangulation_2.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Settings.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_settings_8h.html"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="sstream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="IndexEdge2D.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_index_edge2_d_8h.html"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="Edge2D.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_edge2_d_8h.html"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="cmath",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="Point2D.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_point2_d_8h.html"];
+  Node14 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="Timer.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_timer_8h.html"];
+  Node15 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="ctime",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node17 [color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="GL/glut.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$glut_8h.html"];
+  Node17 -> Node18 [color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="freeglut_std.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$freeglut__std_8h.html"];
+  Node18 -> Node19 [color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="GL/gl.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node18 -> Node20 [color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="GL/glu.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node18 -> Node21 [color="midnightblue",fontsize="10",style="solid"];
+  Node21 [label="stdlib.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}
