@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['record',['record',['../classcmst_1_1_stat.html#ab1e2fe7c367da505a6b5f1fb5eb619d2',1,'cmst::Stat']]],
-  ['resetcurgraph',['resetCurGraph',['../classcmst_1_1_window.html#adfa83ea52f2c09def65b79cdf57092ad',1,'cmst::Window::resetCurGraph(std::vector&lt; Point2D &gt; &amp;points)'],['../classcmst_1_1_window.html#a08365866ac2ffa9793c25c92750341e2',1,'cmst::Window::resetCurGraph()'],['../classcmst_1_1_window.html#a83743944c1c6429f0eb9f3c72c9b7f22',1,'cmst::Window::resetCurGraph(int n)'],['../classcmst_1_1_window.html#aa4ad17303edd88d526b66f9e6918fe7a',1,'cmst::Window::resetCurGraph(int low, int hi)']]],
-  ['resetheight',['resetHeight',['../classcmst_1_1_window.html#a8c4d7788d1932e73397c20b7a9639d69',1,'cmst::Window']]],
-  ['resetshowdelaunay',['resetShowDelaunay',['../classcmst_1_1_window.html#ae54c419d28bd352f52a3beffa6fc1f32',1,'cmst::Window']]],
-  ['resetwidth',['resetWidth',['../classcmst_1_1_window.html#a3f234daf3198e3611892515f1721de44',1,'cmst::Window']]]
+  ['operator_3c',['operator&lt;',['../classcmst_1_1_edge2_d.html#ab710dba1b2f0a4c74d01a7b2c1211efa',1,'cmst::Edge2D::operator&lt;()'],['../classcmst_1_1_index_edge2_d.html#a96fc8ab0bb52c8c3aa8d5eed3a0034dd',1,'cmst::IndexEdge2D::operator&lt;()'],['../classcmst_1_1_point2_d.html#ada9efa4e0f4d7906e2ccaf2afeefea38',1,'cmst::Point2D::operator&lt;()']]],
+  ['operator_3d_3d',['operator==',['../classcmst_1_1_edge2_d.html#a4370b0ab916b4fd8d5ff98733ae57116',1,'cmst::Edge2D::operator==()'],['../classcmst_1_1_point2_d.html#a2181e34aa07d5ce5ac48545408924d22',1,'cmst::Point2D::operator==()']]],
+  ['operator_3e',['operator&gt;',['../classcmst_1_1_index_edge2_d.html#a9b0f6b17a930986f99d30e03c34905c8',1,'cmst::IndexEdge2D']]]
 ];

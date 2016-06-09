@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['length',['length',['../classcmst_1_1_edge2_d.html#adaa859c8f6b412e1174abe8d8b429ce9',1,'cmst::Edge2D']]]
+  ['kruskal',['Kruskal',['../classcmst_1_1_graph2_d.html#a034d2d37b2d106c0e25d7ad7bc67907e',1,'cmst::Graph2D']]]
 ];

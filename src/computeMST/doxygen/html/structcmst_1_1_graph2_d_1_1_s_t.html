@@ -46,8 +46,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -112,35 +112,129 @@ $(document).ready(function(){initNavTree('structcmst_1_1_graph2_d_1_1_s_t.html',
 <div class="title">cmst::Graph2D::ST Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Store a spanning tree of the graph.  
+ <a href="structcmst_1_1_graph2_d_1_1_s_t.html#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for cmst::Graph2D::ST:</div>
+<div class="dyncontent">
+<div class="center"><img src="structcmst_1_1_graph2_d_1_1_s_t__coll__graph.png" border="0" usemap="#cmst_1_1_graph2_d_1_1_s_t_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 0 -->
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1664ad2ca7aeff224949d7ca06e5d8e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1664ad2ca7aeff224949d7ca06e5d8e1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ST</b> (std::vector&lt; <a class="el" href="classcmst_1_1_index_edge2_d.html">IndexEdge2D</a> &gt; edges=std::vector&lt; <a class="el" href="classcmst_1_1_index_edge2_d.html">IndexEdge2D</a> &gt;(), int stTime=0, double length=0.0)</td></tr>
+<tr class="memitem:a1664ad2ca7aeff224949d7ca06e5d8e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcmst_1_1_graph2_d_1_1_s_t.html#a1664ad2ca7aeff224949d7ca06e5d8e1">ST</a> (std::vector&lt; <a class="el" href="classcmst_1_1_index_edge2_d.html">IndexEdge2D</a> &gt; edges=std::vector&lt; <a class="el" href="classcmst_1_1_index_edge2_d.html">IndexEdge2D</a> &gt;(), int stTime=0, double length=0.0)</td></tr>
+<tr class="memdesc:a1664ad2ca7aeff224949d7ca06e5d8e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a1664ad2ca7aeff224949d7ca06e5d8e1">More...</a><br /></td></tr>
 <tr class="separator:a1664ad2ca7aeff224949d7ca06e5d8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a629248d1f9b4b5bc583a7813ae852095"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a629248d1f9b4b5bc583a7813ae852095"></a>
-std::vector&lt; <a class="el" href="classcmst_1_1_index_edge2_d.html">IndexEdge2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_edges</b></td></tr>
+<tr class="memitem:a629248d1f9b4b5bc583a7813ae852095"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classcmst_1_1_index_edge2_d.html">IndexEdge2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcmst_1_1_graph2_d_1_1_s_t.html#a629248d1f9b4b5bc583a7813ae852095">m_edges</a></td></tr>
+<tr class="memdesc:a629248d1f9b4b5bc583a7813ae852095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edges of the spanning tree.  <a href="#a629248d1f9b4b5bc583a7813ae852095">More...</a><br /></td></tr>
 <tr class="separator:a629248d1f9b4b5bc583a7813ae852095"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3201db988690542cc7ef7ddff9525cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3201db988690542cc7ef7ddff9525cc"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_stTime</b></td></tr>
+<tr class="memitem:ad3201db988690542cc7ef7ddff9525cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcmst_1_1_graph2_d_1_1_s_t.html#ad3201db988690542cc7ef7ddff9525cc">m_stTime</a></td></tr>
+<tr class="memdesc:ad3201db988690542cc7ef7ddff9525cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time used to compute the spanning tree.  <a href="#ad3201db988690542cc7ef7ddff9525cc">More...</a><br /></td></tr>
 <tr class="separator:ad3201db988690542cc7ef7ddff9525cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a954af452de884ab5a96ef6a396b9d531"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a954af452de884ab5a96ef6a396b9d531"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>m_length</b></td></tr>
+<tr class="memitem:a954af452de884ab5a96ef6a396b9d531"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcmst_1_1_graph2_d_1_1_s_t.html#a954af452de884ab5a96ef6a396b9d531">m_length</a></td></tr>
+<tr class="memdesc:a954af452de884ab5a96ef6a396b9d531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of the spanning tree.  <a href="#a954af452de884ab5a96ef6a396b9d531">More...</a><br /></td></tr>
 <tr class="separator:a954af452de884ab5a96ef6a396b9d531"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="_graph2_d_8h_source.html">Graph2D.h</a></li>
-</ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Store a spanning tree of the graph. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a1664ad2ca7aeff224949d7ca06e5d8e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cmst::Graph2D::ST::ST </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcmst_1_1_index_edge2_d.html">IndexEdge2D</a> &gt;&#160;</td>
+          <td class="paramname"><em>edges</em> = <code>std::vector&lt;<a class="el" href="classcmst_1_1_index_edge2_d.html">IndexEdge2D</a>&gt;()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stTime</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>length</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a629248d1f9b4b5bc583a7813ae852095"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classcmst_1_1_index_edge2_d.html">IndexEdge2D</a>&gt; cmst::Graph2D::ST::m_edges</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Edges of the spanning tree. </p>
+
+</div>
+</div>
+<a class="anchor" id="a954af452de884ab5a96ef6a396b9d531"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double cmst::Graph2D::ST::m_length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Length of the spanning tree. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad3201db988690542cc7ef7ddff9525cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cmst::Graph2D::ST::m_stTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Time used to compute the spanning tree. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>cmst</b></li><li class="navelem"><a class="el" href="classcmst_1_1_graph2_d.html">Graph2D</a></li><li class="navelem"><a class="el" href="structcmst_1_1_graph2_d_1_1_s_t.html">ST</a></li>
-    <li class="footer">Generated on Tue Jun 7 2016 20:36:08 for computeMST by
+    <li class="navelem"><a class="el" href="namespacecmst.html">cmst</a></li><li class="navelem"><a class="el" href="classcmst_1_1_graph2_d.html">Graph2D</a></li><li class="navelem"><a class="el" href="structcmst_1_1_graph2_d_1_1_s_t.html">ST</a></li>
+    <li class="footer">Generated on Thu Jun 9 2016 18:21:26 for computeMST by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

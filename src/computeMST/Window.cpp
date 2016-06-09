@@ -17,8 +17,14 @@ void cmst::Window::draw()
     if (m_showDelaunay)
         m_curGraph->drawDelaunay();
 
-    m_curGraph->drawMST();
-    m_curGraph->drawPoint();
+    if (m_showMST)
+        m_curGraph->drawMST();
+
+    if (m_showST)
+        m_curGraph->drawST();
+
+    if (m_showPoint)
+        m_curGraph->drawPoint();
 }
 
 void cmst::Window::resetCurGraph(std::vector<Point2D>& points)
@@ -70,6 +76,15 @@ bool cmst::Window::load()
         if (y < 0 || y > MAX_Y) continue;
         points.push_back(cmst::Point2D(x, y));
     }
+
+    std::sort(points.begin(), points.end());
+    points.erase(std::unique(points.begin(), points.end()), points.end());
+    if (points.size() > 10000)
+    {
+        std::cout << "Too many points, cannot compute" << std::endl;
+        return false;
+    }
+
     resetCurGraph(points);
     in.close();
     return true;
@@ -118,7 +133,7 @@ void cmst::Window::generateTest(int n)
     std::vector<cmst::Point2D> points;
     for (int i = 0; i < n; i++)
     {
-        points = cmst::TestcaseGenerator(6000, 6000);
+        points = cmst::TestcaseGenerator(10000, 10000);
         m_test.m_testGraphs.push_back(cmst::Graph2D(points));
 
         m_test.m_delaunayTimeStat.record(m_test.m_testGraphs[i].delaunayTime()/1000.0);

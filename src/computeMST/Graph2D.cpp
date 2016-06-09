@@ -194,7 +194,10 @@ void cmst::Graph2D::drawMST()
         glVertex2f(m_MSTEdge[i].end().x(), m_MSTEdge[i].end().y());
     }
     glEnd();
+}
 
+void cmst::Graph2D::drawST()
+{
     // Draw the test MST
     if (m_ST.size() > 0 && m_displaySTNum != -1)
     {

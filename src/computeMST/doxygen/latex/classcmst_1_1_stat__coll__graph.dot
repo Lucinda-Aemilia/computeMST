@@ -1,6 +1,0 @@
-digraph "cmst::Stat"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{cmst::Stat\n|- m_min\l- m_max\l- m_mean\l- m_standardDeviation\l- m_data\l|+ Stat()\l+ record()\l+ min()\l+ max()\l+ count()\l+ mean()\l+ standardDeviation()\l+ print()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

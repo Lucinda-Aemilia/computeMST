@@ -2,10 +2,6 @@
 \label{classcmst_1_1_stat}\index{cmst::Stat@{cmst::Stat}}
 
 
-{\ttfamily \#include $<$Stat.h$>$}
-
-
-
 Collaboration diagram for cmst::Stat:
 % FIG 0
 \subsection*{Public Member Functions}
@@ -31,15 +27,15 @@ std::string \hyperlink{classcmst_1_1_stat_a03d1a0f52e2ea72cfab11a426726aea4}{pri
 \begin{DoxyCompactItemize}
 \item 
 double \hyperlink{classcmst_1_1_stat_a2f503d58c0bc9eed8bd6d2c46edffbf4}{m\_min}
-\item 
+\begin{DoxyCompactList}\small\item\em Minimum of the data. \end{DoxyCompactList}\item 
 double \hyperlink{classcmst_1_1_stat_a93f52caf45b449d34c87fcbb0ebaa93e}{m\_max}
-\item 
+\begin{DoxyCompactList}\small\item\em Maximum of the data. \end{DoxyCompactList}\item 
 double \hyperlink{classcmst_1_1_stat_a0fc650572d2cea2bae2190188f3a03cf}{m\_mean}
-\item 
+\begin{DoxyCompactList}\small\item\em Average of the data. \end{DoxyCompactList}\item 
 double \hyperlink{classcmst_1_1_stat_aa6321c420c546603588be13de4628957}{m\_standardDeviation}
-\item 
+\begin{DoxyCompactList}\small\item\em Standard deviation of the data. \end{DoxyCompactList}\item 
 std::vector$<$ double $>$ \hyperlink{classcmst_1_1_stat_a8c6fad792b12d961df5ea2b091cb39f4}{m\_data}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -139,7 +135,15 @@ Minimum of recorded data
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_stat_a03d1a0f52e2ea72cfab11a426726aea4}{}\label{classcmst_1_1_stat_a03d1a0f52e2ea72cfab11a426726aea4}
+Print the information of the statistic.
 
+
+\begin{DoxyItemize}
+\item Average
+\item Maximum
+\item Minimum
+\item Standard deviation 
+\end{DoxyItemize}
 
 Here is the call graph for this function:
 % FIG 2
@@ -201,15 +205,35 @@ Here is the caller graph for this function:
 \index{cmst::Stat@{cmst::Stat}!m\_data@{m\_data}}
 \index{m\_data@{m\_data}!cmst::Stat@{cmst::Stat}}
 \subsubsection[{\texorpdfstring{m\_data}{m_data}}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ cmst::Stat::m\_data\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_stat_a8c6fad792b12d961df5ea2b091cb39f4}{}\label{classcmst_1_1_stat_a8c6fad792b12d961df5ea2b091cb39f4}
+
+
+Data. 
+
 \index{cmst::Stat@{cmst::Stat}!m\_max@{m\_max}}
 \index{m\_max@{m\_max}!cmst::Stat@{cmst::Stat}}
 \subsubsection[{\texorpdfstring{m\_max}{m_max}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst::Stat::m\_max\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_stat_a93f52caf45b449d34c87fcbb0ebaa93e}{}\label{classcmst_1_1_stat_a93f52caf45b449d34c87fcbb0ebaa93e}
+
+
+Maximum of the data. 
+
 \index{cmst::Stat@{cmst::Stat}!m\_mean@{m\_mean}}
 \index{m\_mean@{m\_mean}!cmst::Stat@{cmst::Stat}}
 \subsubsection[{\texorpdfstring{m\_mean}{m_mean}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst::Stat::m\_mean\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_stat_a0fc650572d2cea2bae2190188f3a03cf}{}\label{classcmst_1_1_stat_a0fc650572d2cea2bae2190188f3a03cf}
+
+
+Average of the data. 
+
 \index{cmst::Stat@{cmst::Stat}!m\_min@{m\_min}}
 \index{m\_min@{m\_min}!cmst::Stat@{cmst::Stat}}
 \subsubsection[{\texorpdfstring{m\_min}{m_min}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst::Stat::m\_min\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_stat_a2f503d58c0bc9eed8bd6d2c46edffbf4}{}\label{classcmst_1_1_stat_a2f503d58c0bc9eed8bd6d2c46edffbf4}
+
+
+Minimum of the data. 
+
 \index{cmst::Stat@{cmst::Stat}!m\_standardDeviation@{m\_standardDeviation}}
 \index{m\_standardDeviation@{m\_standardDeviation}!cmst::Stat@{cmst::Stat}}
 \subsubsection[{\texorpdfstring{m\_standardDeviation}{m_standardDeviation}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst::Stat::m\_standardDeviation\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_stat_aa6321c420c546603588be13de4628957}{}\label{classcmst_1_1_stat_aa6321c420c546603588be13de4628957}
+
+
+Standard deviation of the data. 
+

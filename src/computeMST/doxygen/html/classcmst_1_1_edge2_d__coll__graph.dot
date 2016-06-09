@@ -1,8 +1,0 @@
-digraph "cmst::Edge2D"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{cmst::Edge2D\n|- m_length\l|+ Edge2D()\l+ length()\l+ start()\l+ end()\l+ operator\<()\l+ operator==()\l# swap_points()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_end\n-m_start" ,arrowhead="odiamond",fontname="Helvetica"];
-  Node2 [label="{cmst::Point2D\n|- m_x\l- m_y\l|+ Point2D()\l+ Point2D()\l+ x()\l+ y()\l+ operator\<()\l+ operator==()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcmst_1_1_point2_d.html"];
-}

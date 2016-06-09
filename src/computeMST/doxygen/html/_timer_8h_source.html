@@ -46,8 +46,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -64,11 +64,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
           </span>
         </div>
       </li>
-    </ul>
-  </div>
-  <div id="navrow2" class="tabs2">
-    <ul class="tablist">
-      <li><a href="files.html"><span>File&#160;List</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -105,15 +100,19 @@ $(document).ready(function(){initNavTree('_timer_8h_source.html','');});
 <div class="title">Timer.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecmst.html">cmst</a></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classcmst_1_1_timer.html">    5</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classcmst_1_1_timer.html">Timer</a></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="classcmst_1_1_timer.html">Timer</a>() { m_begin = std::clock(); }</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordtype">int</span> time() { <span class="keywordflow">return</span> std::clock() - m_begin; }</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordtype">void</span> reset() { m_begin = std::clock(); }</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordtype">int</span> m_begin;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    };</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div><div class="ttc" id="namespacecmst_html"><div class="ttname"><a href="namespacecmst.html">cmst</a></div><div class="ttdef"><b>Definition:</b> TestcaseGenerator.h:11</div></div>
-<div class="ttc" id="classcmst_1_1_timer_html"><div class="ttname"><a href="classcmst_1_1_timer.html">cmst::Timer</a></div><div class="ttdef"><b>Definition:</b> Timer.h:5</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="namespacecmst.html">    3</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecmst.html">cmst</a></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classcmst_1_1_timer.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classcmst_1_1_timer.html">Timer</a></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classcmst_1_1_timer.html#a92455552cedec79b452d3a0f89a0e32e">   12</a></span>&#160;        <a class="code" href="classcmst_1_1_timer.html#a92455552cedec79b452d3a0f89a0e32e">Timer</a>() { <a class="code" href="classcmst_1_1_timer.html#a0fa8671c0b1dc3efca0f4dc5dfe98fc2">m_begin</a> = std::clock(); }</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classcmst_1_1_timer.html#af0145067ee61560f2363dc4a1cb552b9">   17</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classcmst_1_1_timer.html#af0145067ee61560f2363dc4a1cb552b9">time</a>() { <span class="keywordflow">return</span> std::clock() - <a class="code" href="classcmst_1_1_timer.html#a0fa8671c0b1dc3efca0f4dc5dfe98fc2">m_begin</a>; }</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classcmst_1_1_timer.html#a8c7011cc646563211b681249df6dd4cf">   20</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classcmst_1_1_timer.html#a8c7011cc646563211b681249df6dd4cf">reset</a>() { <a class="code" href="classcmst_1_1_timer.html#a0fa8671c0b1dc3efca0f4dc5dfe98fc2">m_begin</a> = std::clock(); }</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classcmst_1_1_timer.html#a0fa8671c0b1dc3efca0f4dc5dfe98fc2">   23</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classcmst_1_1_timer.html#a0fa8671c0b1dc3efca0f4dc5dfe98fc2">m_begin</a>; </div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    };</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div><div class="ttc" id="namespacecmst_html"><div class="ttname"><a href="namespacecmst.html">cmst</a></div><div class="ttdef"><b>Definition:</b> Timer.h:3</div></div>
+<div class="ttc" id="classcmst_1_1_timer_html"><div class="ttname"><a href="classcmst_1_1_timer.html">cmst::Timer</a></div><div class="ttdef"><b>Definition:</b> Timer.h:8</div></div>
+<div class="ttc" id="classcmst_1_1_timer_html_a0fa8671c0b1dc3efca0f4dc5dfe98fc2"><div class="ttname"><a href="classcmst_1_1_timer.html#a0fa8671c0b1dc3efca0f4dc5dfe98fc2">cmst::Timer::m_begin</a></div><div class="ttdeci">int m_begin</div><div class="ttdoc">The time at construction or reset. </div><div class="ttdef"><b>Definition:</b> Timer.h:23</div></div>
+<div class="ttc" id="classcmst_1_1_timer_html_af0145067ee61560f2363dc4a1cb552b9"><div class="ttname"><a href="classcmst_1_1_timer.html#af0145067ee61560f2363dc4a1cb552b9">cmst::Timer::time</a></div><div class="ttdeci">int time()</div><div class="ttdef"><b>Definition:</b> Timer.h:17</div></div>
+<div class="ttc" id="classcmst_1_1_timer_html_a92455552cedec79b452d3a0f89a0e32e"><div class="ttname"><a href="classcmst_1_1_timer.html#a92455552cedec79b452d3a0f89a0e32e">cmst::Timer::Timer</a></div><div class="ttdeci">Timer()</div><div class="ttdoc">Constructor. Begin the timer. </div><div class="ttdef"><b>Definition:</b> Timer.h:12</div></div>
+<div class="ttc" id="classcmst_1_1_timer_html_a8c7011cc646563211b681249df6dd4cf"><div class="ttname"><a href="classcmst_1_1_timer.html#a8c7011cc646563211b681249df6dd4cf">cmst::Timer::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset the timer. </div><div class="ttdef"><b>Definition:</b> Timer.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Timer.h</b></li>
-    <li class="footer">Generated on Tue Jun 7 2016 20:36:08 for computeMST by
+    <li class="footer">Generated on Thu Jun 9 2016 18:21:26 for computeMST by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

@@ -68,6 +68,12 @@ namespace cmst
             return m_standardDeviation = std::sqrt(m_standardDeviation);
         }
 
+        /// Print the information of the statistic.
+        ///
+        /// - Average
+        /// - Maximum
+        /// - Minimum
+        /// - Standard deviation
         std::string print()
         {
             std::stringstream str;
@@ -83,10 +89,10 @@ namespace cmst
 
     private:
 
-        double m_min;
-        double m_max;
-        double m_mean;
-        double m_standardDeviation;
-        std::vector<double> m_data;
+        double m_min; ///< Minimum of the data.
+        double m_max; ///< Maximum of the data.
+        double m_mean; ///< Average of the data.
+        double m_standardDeviation; ///< Standard deviation of the data.
+        std::vector<double> m_data; ///< Data.
     };
 }

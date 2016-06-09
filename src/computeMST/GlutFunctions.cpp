@@ -130,7 +130,10 @@ void createGLUTMenus()
 
 	int showMenu = glutCreateMenu(processShowMenu);
 	// glutAddMenuEntry("Voronoi", cmst::Menu::SHOW_VORONOI);
+	glutAddMenuEntry("Points", cmst::Menu::SHOW_POINT);
 	glutAddMenuEntry("Delaunay", cmst::Menu::SHOW_DELAUNAY);
+	glutAddMenuEntry("MST", cmst::Menu::SHOW_MST);
+	glutAddMenuEntry("ST", cmst::Menu::SHOW_ST);
 
 	int testMenu = glutCreateMenu(processTestMenu);
 	glutAddMenuEntry("Test (5)", cmst::Menu::TEST_5);
@@ -192,6 +195,15 @@ void processShowMenu(int option)
     */
     case cmst::Menu::SHOW_DELAUNAY :
         cmst::Window::instance()->resetShowDelaunay();
+        break;
+    case cmst::Menu::SHOW_MST :
+        cmst::Window::instance()->resetShowMST();
+        break;
+    case cmst::Menu::SHOW_POINT :
+        cmst::Window::instance()->resetShowPoint();
+        break;
+    case cmst::Menu::SHOW_ST :
+        cmst::Window::instance()->resetShowST();
         break;
     }
 }

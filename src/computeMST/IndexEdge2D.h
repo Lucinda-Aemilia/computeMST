@@ -4,6 +4,7 @@
 
 namespace cmst
 {
+    /// Edge with start and end point indices in an array.
     class IndexEdge2D : public Edge2D
     {
 
@@ -11,6 +12,8 @@ namespace cmst
 
         IndexEdge2D() {}
 
+        /// Store the edge as an undirected one. The two end points will be sorted according to
+        /// indices.
         IndexEdge2D(Point2D p1, Point2D p2, int index1, int index2) : Edge2D(p1, p2)
         {
             if (index1 > index2)
@@ -22,8 +25,10 @@ namespace cmst
             m_index[1] = index2;
         }
 
+        /// The index of the starting point.
         int startIndex() const { return m_index[0]; }
 
+        /// The index of the end point.
         int endIndex() const { return m_index[1]; }
 
         /// Compares edges by length.
@@ -48,6 +53,6 @@ namespace cmst
 
     private:
 
-        int m_index[2];
+        int m_index[2]; ///< Indices of the end points.
     };
 }

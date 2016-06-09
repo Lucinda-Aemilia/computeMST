@@ -1,5 +1,6 @@
 \documentclass[oneside]{book}
 \usepackage[bookmarks=true, colorlinks, linkcolor=gray]{hyperref}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
 \usepackage{cite}
 \usepackage{graphicx}
 \usepackage{listings}
@@ -59,7 +60,15 @@
 \addinputpath{{doxygen/}}
 \makeatother
 
-\graphicspath{{doxygen/}}
+\graphicspath{{doxygen/}{UML/}}
+
+% 章节不分页
+\usepackage{xpatch}
+\makeatletter
+\xpatchcmd{\chapter}
+  {\if@openright\cleardoublepage\else\clearpage\fi}{\par\relax}
+  {}{}
+\makeatother
 
 \title{Individual Project 2\\ Constructing Minimum Spanning Trees\\ Software Design Document}
 \author{Zhang Huimeng, 2015011280}
@@ -77,18 +86,18 @@
 \part{Introduction}
 
     \chapter{Purpose}
-    
-        This software design document describes the architecture and system design of project ComputeMST. This is a homework of Fundamentals of Object-Oriented Programming class. The homework requirement is as follows:
-        
+
+        This software design document describes the architecture and system design of project ComputeMST. This is a homework of Fundamentals of Object-Oriented Programming class, Spring 2016. The homework requirement is as follows:
+
          (II) Project: On Constructing Minimum Spanning Trees (Difficulty: 1.1)
 
         Requirements and TIPS:
 
         (1) Implement the MST algorithm based on Voronoi diagram for computing Euclidean minimum spanning trees in 2D plane.
 
-        (2) Please refer to the following link for MST construction algorithms. Either Prim's or Kruskal's algorithm is ok. Please refer to Page 39 for the idea of using Voronoi for MST computation. \url{http://www.cs.princeton.edu/courses/archive/spr07/cos226/lectures/mst.pdf}
+        (2) Please refer to \href{http://www.cs.princeton.edu/courses/archive/spr07/cos226/lectures/mst.pdf}{the following link} for MST construction algorithms. Either Prim's or Kruskal's algorithm is ok. Please refer to Page 39 for the idea of using Voronoi for MST computation.
 
-        (3) Use the CGAL Library (http://www.cgal.org/) for constructing the Voronoi diagram and Delaunay triangulation.
+        (3) Use the \href{http://www.cgal.org/}{CGAL Library} for constructing the Voronoi diagram and Delaunay triangulation.
 
         (4) Randomly generate 5 different testcases with more than 5000 points without duplicates to test the implemented method.
 
@@ -96,29 +105,65 @@
 
         (6) Report the statistics of the experimental results, e.g., total runtime, total number of points, total length of the MST edges, etc. Figures and tables on the experimental results are welcome.
 
-        (7) [This is not mandatory to finish, but it is a challenging topic] Again, can you compute the top K (1 <= K <= 20) minimum spanning trees?
-
-    \chapter{Scope}
+        (7) [This is not mandatory to finish, but it is a challenging topic] Again, can you compute the top K ($1 <= K <= 20$) minimum spanning trees?
     
-        I implemented the first six requirements of the homework, mainly using CGAL and Kruskal's MST algorithm.
+    \chapter{Scope}
+
+        I implemented the first six requirements of the homework, mainly using CGAL and Kruskal's MST algorithm. The program can load input from file or randomly generate input for itself; it has a GUI interface and can print results of the MST computation to file.
 
     \chapter{Definitions and Acronyms}
-
-\clearpage
+        
+        
 
 
 \part{System Overview}
-
+    
+    The program can compute Delaunay triangulation (via CGAL library) and MST for up to 10000 points in a 2-dimensional plane in 1 or 2 seconds. It can output the result to file. Also, it has a interface written with Freeglut.
+    
 \clearpage
 
 
-\chapter{System Architecture}
+\part{System Architecture}
 
     \chapter{Architectural Design} % 将整个系统划分为功能模块，介绍每个模块之间的功能和相互关系
-    
-        The program can be divided into two parts: the computational part and the display part. The computational part 
+
+        The program can be divided into three parts: the Basics part, the Computational part and the Display part. 
+        
+        \begin{center}
+        \includegraphics[width=\linewidth / 2]{main.png}
+        \end{center}
+        
+        The basics part provides some useful tools for the Computational part, like statistics and timer.
+        
+        The computational part does the computation, and interacts with the Display part to provide a workable interface.
+        
+        The display part deals with the interface and user input.
 
     \chapter{Decomposition Description}
+    
+        \section{Basics}
+        
+            The \hyperlink{classcmst_1_1_stat}{Stat} class deals with statistics. It receives data in the form of floating-point number and can work continuously. It calculates the mean, maximum, minimum and standard deviation of the data.
+        
+            \begin{center}
+            \includegraphics[width=\linewidth / 2]{classcmst_1_1_stat__coll__graph}
+            \end{center}
+            
+            
+        
+        \section{Computational}
+            
+            The \hyperlink{classcmst_1_1_point2_d}{Point2D}, \hyperlink{classcmst_1_1_edge2_d}{Edge2D} and \hyperlink{classcmst_1_1_index_edge2_d}{IndexEdge2D} classes are the basic 2-dimensional computational geometry classes.
+
+            \begin{center}
+            \includegraphics[width=\linewidth / 2]{classcmst_1_1_edge2_d__inherit__graph}
+            \end{center}
+
+            \begin{center}
+            \includegraphics[width=\linewidth / 2]{classcmst_1_1_point2_d__coll__graph}
+            \end{center}
+        
+        \section{Display}
 
     \chapter{Design Rationale}
 

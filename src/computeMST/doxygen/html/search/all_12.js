@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['vec2f',['Vec2f',['../class_vec2f.html',1,'Vec2f'],['../class_vec2f.html#a3582875fbf3badc6af02646e07bcf440',1,'Vec2f::Vec2f()'],['../class_vec2f.html#a3ce4919fdf7137dd1536b68f4aae53fb',1,'Vec2f::Vec2f(double _x, double _y)'],['../class_vec2f.html#a3a41f568a8852d55f8d4989af776b798',1,'Vec2f::Vec2f(const Vec2f &amp;v)']]]
+  ['width',['width',['../classcmst_1_1_window.html#a5fc4ccbd9afed56cd17d341269028da2',1,'cmst::Window']]],
+  ['window',['Window',['../classcmst_1_1_window.html#a2f0377f780b0dec7f9ca43145d98e8d1',1,'cmst::Window::Window()'],['../classcmst_1_1_window.html#a3a06a150faa316137c794be5acac4979',1,'cmst::Window::Window(const Window &amp;)']]],
+  ['window',['Window',['../classcmst_1_1_window.html',1,'cmst']]]
 ];

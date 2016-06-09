@@ -43,15 +43,41 @@ void initRendering();
 void createGLUTMenus();
 
 /// Sub-menu 'New' process function
+///
+/// Provides ways of generating new graphs of
+/// random numbers of points \n
+/// The point numbers have these ranges to select from:
+/// - [4, 10]
+/// - (10, 100]
+/// - (100, 1000]
+/// - (1000, 5000]
+/// - (5000, 10000]
 void processNewMenu(int option);
 
 /// Sub-menu 'Show' process function
+///
+/// Provides options of whether to display the Delaunay diagram
 void processShowMenu(int option);
 
 /// Sub-menu 'Test' process function
+///
+/// Provides options of running Tests of graphs.\n
+/// Information of the test, like time statistics will be printed.\n
+/// Graph size: 6000\n
+/// Test size:\n
+/// - 5
+/// - 20
 void processTestMenu(int option);
 
 /// Main menu process function
+/// Menu entries:
+/// - Load: load a graph from file input. For input format, see src/example_input.txt.
+/// - Generate: see processNewMenu(int option)
+/// - Show: see processShowMenu(int option)
+/// - Run Test: see processTestMenu(int option)
+/// - Validate: Run a MST validate test. The algorithm is to generate all possible edges in a Eculidean graph, then run Kruskal's MST algorithm.
+/// - Print: Print the current graph information to file.
+/// - Quit: Quit the program.
 void processMainMenu(int option);
 
 #endif // FREEGLUT

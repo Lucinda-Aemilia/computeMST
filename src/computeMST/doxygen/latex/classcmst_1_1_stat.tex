@@ -2,15 +2,14 @@
 \label{classcmst_1_1_stat}\index{cmst\+::\+Stat@{cmst\+::\+Stat}}
 
 
-{\ttfamily \#include $<$Stat.\+h$>$}
-
+Collaboration diagram for cmst\+:\+:Stat\+:
+% FIG 0
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classcmst_1_1_stat_a1f07a880a815c7efe4e4d244fb0c6b7d}{Stat} ()
 \item 
-void \hyperlink{classcmst_1_1_stat_ab1e2fe7c367da505a6b5f1fb5eb619d2}{record} (double data)\hypertarget{classcmst_1_1_stat_ab1e2fe7c367da505a6b5f1fb5eb619d2}{}\label{classcmst_1_1_stat_ab1e2fe7c367da505a6b5f1fb5eb619d2}
-
+void \hyperlink{classcmst_1_1_stat_ab1e2fe7c367da505a6b5f1fb5eb619d2}{record} (double data)
 \begin{DoxyCompactList}\small\item\em Record a datum and update m\+\_\+min, m\+\_\+max. \end{DoxyCompactList}\item 
 double \hyperlink{classcmst_1_1_stat_a1a6a92dee526145fb289d79a94afe3ae}{min} () const 
 \item 
@@ -22,9 +21,21 @@ double \hyperlink{classcmst_1_1_stat_aa40d8d516e7f866146d91866d63faf2b}{mean} ()
 \item 
 double \hyperlink{classcmst_1_1_stat_abfbaefc3a4174643a2eb282251fd86a5}{standard\+Deviation} ()
 \item 
-std\+::string {\bfseries print} ()\hypertarget{classcmst_1_1_stat_a03d1a0f52e2ea72cfab11a426726aea4}{}\label{classcmst_1_1_stat_a03d1a0f52e2ea72cfab11a426726aea4}
-
+std\+::string \hyperlink{classcmst_1_1_stat_a03d1a0f52e2ea72cfab11a426726aea4}{print} ()
 \end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classcmst_1_1_stat_a2f503d58c0bc9eed8bd6d2c46edffbf4}{m\+\_\+min}
+\begin{DoxyCompactList}\small\item\em Minimum of the data. \end{DoxyCompactList}\item 
+double \hyperlink{classcmst_1_1_stat_a93f52caf45b449d34c87fcbb0ebaa93e}{m\+\_\+max}
+\begin{DoxyCompactList}\small\item\em Maximum of the data. \end{DoxyCompactList}\item 
+double \hyperlink{classcmst_1_1_stat_a0fc650572d2cea2bae2190188f3a03cf}{m\+\_\+mean}
+\begin{DoxyCompactList}\small\item\em Average of the data. \end{DoxyCompactList}\item 
+double \hyperlink{classcmst_1_1_stat_aa6321c420c546603588be13de4628957}{m\+\_\+standard\+Deviation}
+\begin{DoxyCompactList}\small\item\em Standard deviation of the data. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classcmst_1_1_stat_a8c6fad792b12d961df5ea2b091cb39f4}{m\+\_\+data}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -96,6 +107,12 @@ Mean of all data
 {\em 0.\+0} & If no data has been recorded. \\
 \hline
 \end{DoxyRetVals}
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
 \index{cmst\+::\+Stat@{cmst\+::\+Stat}!min@{min}}
 \index{min@{min}!cmst\+::\+Stat@{cmst\+::\+Stat}}
 \subsubsection[{\texorpdfstring{min() const }{min() const }}]{\setlength{\rightskip}{0pt plus 5cm}double cmst\+::\+Stat\+::min (
@@ -111,6 +128,50 @@ Minimum of recorded data
 {\em 0.\+0} & If no data has been recorded \\
 \hline
 \end{DoxyRetVals}
+\index{cmst\+::\+Stat@{cmst\+::\+Stat}!print@{print}}
+\index{print@{print}!cmst\+::\+Stat@{cmst\+::\+Stat}}
+\subsubsection[{\texorpdfstring{print()}{print()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string cmst\+::\+Stat\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_stat_a03d1a0f52e2ea72cfab11a426726aea4}{}\label{classcmst_1_1_stat_a03d1a0f52e2ea72cfab11a426726aea4}
+Print the information of the statistic.
+
+
+\begin{DoxyItemize}
+\item Average
+\item Maximum
+\item Minimum
+\item Standard deviation 
+\end{DoxyItemize}
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\index{cmst\+::\+Stat@{cmst\+::\+Stat}!record@{record}}
+\index{record@{record}!cmst\+::\+Stat@{cmst\+::\+Stat}}
+\subsubsection[{\texorpdfstring{record(double data)}{record(double data)}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst\+::\+Stat\+::record (
+\begin{DoxyParamCaption}
+\item[{double}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_stat_ab1e2fe7c367da505a6b5f1fb5eb619d2}{}\label{classcmst_1_1_stat_ab1e2fe7c367da505a6b5f1fb5eb619d2}
+
+
+Record a datum and update m\+\_\+min, m\+\_\+max. 
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
 \index{cmst\+::\+Stat@{cmst\+::\+Stat}!standard\+Deviation@{standard\+Deviation}}
 \index{standard\+Deviation@{standard\+Deviation}!cmst\+::\+Stat@{cmst\+::\+Stat}}
 \subsubsection[{\texorpdfstring{standard\+Deviation()}{standardDeviation()}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst\+::\+Stat\+::standard\+Deviation (
@@ -128,6 +189,51 @@ Standard deviation of all data
 \end{DoxyRetVals}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
-\item 
-Stat.\+h\end{DoxyCompactItemize}
+Here is the call graph for this function\+:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+
+
+\subsection{Member Data Documentation}
+\index{cmst\+::\+Stat@{cmst\+::\+Stat}!m\+\_\+data@{m\+\_\+data}}
+\index{m\+\_\+data@{m\+\_\+data}!cmst\+::\+Stat@{cmst\+::\+Stat}}
+\subsubsection[{\texorpdfstring{m\+\_\+data}{m_data}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ cmst\+::\+Stat\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_stat_a8c6fad792b12d961df5ea2b091cb39f4}{}\label{classcmst_1_1_stat_a8c6fad792b12d961df5ea2b091cb39f4}
+
+
+Data. 
+
+\index{cmst\+::\+Stat@{cmst\+::\+Stat}!m\+\_\+max@{m\+\_\+max}}
+\index{m\+\_\+max@{m\+\_\+max}!cmst\+::\+Stat@{cmst\+::\+Stat}}
+\subsubsection[{\texorpdfstring{m\+\_\+max}{m_max}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst\+::\+Stat\+::m\+\_\+max\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_stat_a93f52caf45b449d34c87fcbb0ebaa93e}{}\label{classcmst_1_1_stat_a93f52caf45b449d34c87fcbb0ebaa93e}
+
+
+Maximum of the data. 
+
+\index{cmst\+::\+Stat@{cmst\+::\+Stat}!m\+\_\+mean@{m\+\_\+mean}}
+\index{m\+\_\+mean@{m\+\_\+mean}!cmst\+::\+Stat@{cmst\+::\+Stat}}
+\subsubsection[{\texorpdfstring{m\+\_\+mean}{m_mean}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst\+::\+Stat\+::m\+\_\+mean\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_stat_a0fc650572d2cea2bae2190188f3a03cf}{}\label{classcmst_1_1_stat_a0fc650572d2cea2bae2190188f3a03cf}
+
+
+Average of the data. 
+
+\index{cmst\+::\+Stat@{cmst\+::\+Stat}!m\+\_\+min@{m\+\_\+min}}
+\index{m\+\_\+min@{m\+\_\+min}!cmst\+::\+Stat@{cmst\+::\+Stat}}
+\subsubsection[{\texorpdfstring{m\+\_\+min}{m_min}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst\+::\+Stat\+::m\+\_\+min\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_stat_a2f503d58c0bc9eed8bd6d2c46edffbf4}{}\label{classcmst_1_1_stat_a2f503d58c0bc9eed8bd6d2c46edffbf4}
+
+
+Minimum of the data. 
+
+\index{cmst\+::\+Stat@{cmst\+::\+Stat}!m\+\_\+standard\+Deviation@{m\+\_\+standard\+Deviation}}
+\index{m\+\_\+standard\+Deviation@{m\+\_\+standard\+Deviation}!cmst\+::\+Stat@{cmst\+::\+Stat}}
+\subsubsection[{\texorpdfstring{m\+\_\+standard\+Deviation}{m_standardDeviation}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst\+::\+Stat\+::m\+\_\+standard\+Deviation\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_stat_aa6321c420c546603588be13de4628957}{}\label{classcmst_1_1_stat_aa6321c420c546603588be13de4628957}
+
+
+Standard deviation of the data. 
+

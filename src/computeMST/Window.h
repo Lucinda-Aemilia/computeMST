@@ -18,6 +18,9 @@ namespace cmst
         SHOW,
         SHOW_VORONOI,
         SHOW_DELAUNAY,
+        SHOW_POINT,
+        SHOW_MST,
+        SHOW_ST,
         TEST,
         TEST_5,
         TEST_20,
@@ -74,6 +77,15 @@ namespace cmst
 
             /// Change whether the Delaunay diagram is to be drawn to the GLUT window.
             void resetShowDelaunay() { m_showDelaunay = !m_showDelaunay; }
+
+            /// Change whether the points are to be drawn to the GLUT window.
+            void resetShowPoint() { m_showPoint = !m_showPoint; }
+
+            /// Change whether the MST is to be drawn to the GLUT window.
+            void resetShowMST() { m_showMST = !m_showMST; }
+
+            /// Change whether the STs are to be drawn to the GLUT window.
+            void resetShowST() { m_showST = !m_showST; }
 
             /// Record the width of current GLUT window.
             void resetWidth(int width) { m_width = width; }
@@ -147,21 +159,25 @@ namespace cmst
                 }
             }
 
+            /// Print the information of the current graph to file graph.txt.
             bool printToFile()
             {
                 return m_curGraph->print();
             }
 
+            /// Change the MST that is being displayed.
             void changeMSTDisplay(int direc)
             {
                 m_curGraph->changeSTDisplay(direc);
             }
 
+            /// Print information of the current ST to console.
             void printSTInfo()
             {
                 m_curGraph->printSTInfo();
             }
 
+            /// Run the validator for small graphs.
             void runValidate()
             {
                 if (m_curGraph->pointNum() > 5000)
@@ -204,7 +220,8 @@ namespace cmst
         private:
 
             /// Constructor
-            Window() : m_curGraph(NULL), m_showDelaunay(true), m_width(0), m_height(0) {}
+            Window() : m_curGraph(NULL), m_showPoint(true), m_showDelaunay(true), m_showMST(true),
+                m_showST(true), m_width(0), m_height(0) {}
 
             static Window* m_instance; ///< The pointer to an instance of cmst::Window.
 
@@ -214,7 +231,10 @@ namespace cmst
 
             // bool m_showVoronoi;
 
-            bool m_showDelaunay; ///< Whether the Delaunay Diagram is to be drawn.
+            bool m_showDelaunay; ///< Whether the Delaunay iagram is to be drawn.
+            bool m_showMST; ///< Whether the MST is to be drawn.
+            bool m_showST; ///< Whether the MST is to be drawn.
+            bool m_showPoint; ///< Whether the points are to be drawn.
 
             int m_width; ///< The width of current GLUT window.
             int m_height; ///< The height of current GLUT window.
